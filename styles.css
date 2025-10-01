@@ -21,6 +21,7 @@
 
 body {
   margin: 0;
+  padding:0;
   background-color: var(--primaryBackgroudColor);
   font-family: var(--primaryFontFamily);
   height:100vh;
@@ -74,8 +75,9 @@ li {
 
 section {
   
-  align-items: first baseline;
-  height:100%;
+  align-items: baseline;
+  height: 100%;
+
  
 }
 

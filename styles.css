@@ -22,6 +22,7 @@
 body {
   margin: 0;
   background-color: var(--primaryBackgroudColor);
+  font-family: var(--primaryFontFamily);
 }
 
 /* HEADER */
@@ -72,6 +73,9 @@ section {
   height: 100vh;
 }
 
+.regTaskToDoForm {
+  flex-direction: column;
+}
 .priority {
   align-items: center;
 }
@@ -79,8 +83,18 @@ section {
   flex-direction: column;
 }
 
+.priorityText {
+  color: #40a0dB;
+  font-size: 26px;
+}
+
+.highPriorityText, .mediumPriorityText, .lowPriorityText {
+  font-size: 20px;
+}
+
 .highPriorityText {
   color:var(--highPriorityColor);
+
 }
 
 .mediumPriorityText {

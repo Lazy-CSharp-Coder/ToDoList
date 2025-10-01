@@ -75,7 +75,7 @@ li {
 
 main {
   flex-grow: 1;
-  margin: 30px;
+  margin: 40px;
 }
 
 section {
@@ -84,13 +84,16 @@ section {
 
 .hero {
   flex-direction: row;
-  justify-content: baseline;
+  justify-content:center;
+  gap: 53px;
 }
 
 .regTaskToDoForm {
   flex-direction: column;
   justify-content: center;
+  align-self: flex-start;
   gap:24px;
+
   
 }
 
@@ -191,6 +194,7 @@ section {
 /* så over til selve listen og knappene til den */
 
 .toDoListDiv {
+  flex-direction: column;
   width: 577px;
   height: 650px;
   background-color: var(--headerBackgroundColor);
@@ -203,16 +207,39 @@ section {
 .listHeadingDiv {
   width:100%;
   justify-content: space-between;
+  height: fit-content;
+  background-color: #add8e6;
   
+}
+
+.listHeadingText {
+ padding-left: 10px;
+ padding-right:30px;
 }
 
 .buttonDiv {
   flex-direction: column;
   justify-content: center;
+  gap: 37px;
 }
 
+.taskCompletedButton, .taskDeleteButton {
+  font-family: var(--primaryFontFamily);
+  font-size: 15px;
+  width : 206px;
+  height: 75px;
+  background-color: var(--headerBackgroundColor);
+  border: 1px solid var(--primaryTextColor);
+  border-radius: 5px;
+}
 
+.taskCompletedImg {
+  width: 39px;
+}
 
+.taskDeleteImg {
+  width: 45px;
+}
 
 
 

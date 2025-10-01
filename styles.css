@@ -168,12 +168,13 @@ section {
   color: #40a0dB;
   font-size: 26px;
   margin-top: 2px;
-  padding-left: 110px;
+
 }
 
 .highPriorityText, .mediumPriorityText, .lowPriorityText {
   font-size: 20px;
   margin: 2px;
+  margin-left: 20px;
 }
 
 .highPriorityText {

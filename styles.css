@@ -93,6 +93,7 @@ section {
 
 .taskPriorityDiv {
   align-items: center;
+  gap: 48px;
 }
 
 .priority {
@@ -106,6 +107,7 @@ section {
 .priorityText {
   color: #40a0dB;
   font-size: 26px;
+  margin-top: 2px;
 }
 
 .highPriorityText, .mediumPriorityText, .lowPriorityText {
@@ -126,6 +128,17 @@ section {
   color:var(--lowPriorityColor);
 }
 
+.addTaskToListButton {
+  width:472px;
+  height:54px;
+  border-radius: 5px;
+  border:1px solid var(--primaryTextColor);
+  background-color:var(--headerBackgroundColor);
+  color:black;
+
+
+
+}
 /* FOOTER */
 
 footer {

@@ -4,9 +4,10 @@ const lowPriorityCheck = document.querySelector("#lowPriorityCheck");
 
 console.log(highPriorityCheck + mediumPriorityCheck + lowPriorityCheck);
 
-mediumPriorityCheck.check = true;
+highPriorityCheck.addEventListener("change", function() { mediumPriorityCheck.checked = false; lowPriorityCheck.checked = false; });
+mediumPriorityCheck.addEventListener("change", function() { highPriorityCheck.checked = false; lowPriorityCheck.checked = false; });
+lowPriorityCheck.addEventListener("change", function() { highPriorityCheck.checked = false; mediumPriorityCheck.checked = false; });
+
+mediumPriorityCheck.checked = true;
 console.log(mediumPriorityCheck.check)
 
-highPriorityCheck.addEventListener("check", function() { console.log("i'm here"); mediumPriorityCheck.check = false; lowPriorityCheck.check = false; });
-mediumPriorityCheck.addEventListener("check", function() { highPriorityCheck.check = false; lowPriorityCheck.check = false; });
-lowPriorityCheck.addEventListener("check", function() { highPriorityCheck.check = false; mediumPriorityCheck.check = false; });

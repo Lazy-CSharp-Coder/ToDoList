@@ -281,12 +281,16 @@ footer {
   color: white;
   text-align: center;
   background-color: gray;
-  height: 100px;
+  height: 81px;
 }
 
 .kodeloftLogoImg {
   width: 90px;
   padding: 28px;
+}
+
+.myInfoWrapper {
+  gap: 38px;
 }
 
 .footerText {
@@ -296,6 +300,7 @@ footer {
 
 .footerTextName {
   color:var(--primaryTextColor);
+  margin:0;
 }
 
 .contactInfo {

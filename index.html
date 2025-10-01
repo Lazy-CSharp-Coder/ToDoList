@@ -37,11 +37,11 @@
               <p class="priorityText">Prioritet</p>
                <label class="flex priority" for="taskHighPriority">
                 <input type="checkbox" id="taskHighPriority" class="taskHighPriority">
-                <p class=highPriorityText> Høy - må gjøres i dag </p>
+                <p class=highPriorityText> Høy - må gjøres i dag (dato) </p>
               </label>
               <label class="flex priority" for="taskMediumPriority">
                 <input type="checkbox" id="taskMediumPriority" class="taskMediumPriority">
-                <p class=mediumPriorityText>Middels - helst gjøres i dag</p>
+                <p class=mediumPriorityText>Middels - bør gjøres i dag (dato)</p>
               </label>
               <label class="flex priority" for="taskLowPriority">
                 <input type="checkbox" id="taskLowPriority" class="taskLowPriority">
@@ -51,6 +51,17 @@
           </div>  
           <button id="addTaskToListButton" class="addTaskToListButton">Legg til i liste</button>
         </form>
+        <div class="listAndButtonWrapper">
+          <div class="toDoListDiv">
+            <div class="listHeadingDiv">
+              <p class="listHeadingText">Oppgave som venter :</p>
+              <p class="listHeadingText">Dato satt opp :</p>
+            </div>
+            <ul id="toDoList" class="toDoList">
+            </ul>
+          </div>
+        </div>
+
         <!-- Hero / Main / Home -->
       </section> 
     </main>

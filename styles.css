@@ -174,10 +174,36 @@ section {
   background-color:var(--headerBackgroundColor);
   color:black;
   margin-top: 23px;
-
-
-
 }
+
+/* så over til selve listen og knappene til den */
+
+.toDoListDiv {
+  width: 577px;
+  height: 650px;
+  background-color: var(--headerBackgroundColor);
+  border: 3px solid var(--primaryTextColor);
+  border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FOOTER */
 
 footer {

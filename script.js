@@ -21,7 +21,7 @@ let darkMode = true;
 
 function darkLightModeToggle()
 {
-    const main = document.querySelector("main");
+    const main = document.querySelector("body");
     if(darkMode) 
     {
         main.classList.add("lightMode");

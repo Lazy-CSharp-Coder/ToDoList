@@ -79,11 +79,12 @@ main {
 }
 
 section {
-  
-  align-items: baseline;
+   
+}
 
-
- 
+.hero {
+  flex-direction: row;
+  justify-content: baseline;
 }
 
 .regTaskToDoForm {

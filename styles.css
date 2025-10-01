@@ -195,6 +195,19 @@ section {
   background-color: var(--headerBackgroundColor);
   border: 3px solid var(--primaryTextColor);
   border-radius: 3px;
+  margin:0px;
+
+}
+
+.listHeadingDiv {
+  width:100%;
+  justify-content: space-between;
+  
+}
+
+.buttonDiv {
+  flex-direction: column;
+  justify-content: center;
 }
 
 

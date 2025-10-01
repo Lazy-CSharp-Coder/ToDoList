@@ -37,3 +37,4 @@ function darkLightModeToggle()
 const darkLightIcon = document.querySelector("#darkLightIcon");
 darkLightIcon.addEventListener("click", darkLightModeToggle);
 
+// end dark/light mode toggle

@@ -280,6 +280,7 @@ footer {
   text-align: center;
   background-color: var(--headerBackgroundColor);
   height: 81px;
+  margin:0;
 }
 
 .kodeloftLogoImg {

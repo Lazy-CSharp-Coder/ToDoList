@@ -146,6 +146,10 @@ section {
   gap: 57px;
 }
 
+.taskPriorityCheck {
+  width: 10px;
+  border-radius: 3px;
+}
 .priority {
   align-items: center;
 }

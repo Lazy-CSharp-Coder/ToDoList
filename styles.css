@@ -88,6 +88,7 @@ section {
 
 .taskPriorityIcon {
   width: 62px;
+  align-self: baseline;
 }
 
 .taskPriorityDiv {

@@ -239,12 +239,14 @@ section {
 .taskCompletedButton, .taskDeleteButton {
   font-family: var(--primaryFontFamily);
   font-size: 15px;
-  width : 206px;
+  width : 216px;
   height: 75px;
   background-color: var(--headerBackgroundColor);
   border: 1px solid var(--primaryTextColor);
   border-radius: 5px;
   align-items: center;
+  gap: 15px;
+  padding-left:20px;
 }
 
 .taskCompletedImg {
@@ -276,24 +278,27 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Source Sans 3';
   color: white;
   text-align: center;
   background-color: gray;
   height: 100px;
 }
 
-.kodeloftlogo {
+.kodeloftLogoImg {
   width: 90px;
   padding: 28px;
 }
 
-.footertext {
+.footerText {
   color: rgb(220, 220, 220);
   margin: 0;
 }
 
-.emailandgithub {
+.footerTextName {
+  color:var(--primaryTextColor);
+}
+
+.contactInfo {
   display: flex;
   gap: 20px;
   padding-right: 50px;

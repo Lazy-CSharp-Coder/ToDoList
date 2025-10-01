@@ -75,12 +75,28 @@ section {
 
 .regTaskToDoForm {
   flex-direction: column;
+  justify-content: center;
 }
+
+.taskIcon {
+  width:82px;
+}
+
+.taskDateIcon {
+  width:70px;
+}
+
+.taskPriorityIcon {
+  width: 62px;
+}
+
+
 .priority {
   align-items: center;
 }
 .priorityList {
   flex-direction: column;
+  justify-content: center;
 }
 
 .priorityText {

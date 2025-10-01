@@ -173,6 +173,7 @@ section {
   border:1px solid var(--primaryTextColor);
   background-color:var(--headerBackgroundColor);
   color:black;
+  margin-top: 23px;
 
 
 

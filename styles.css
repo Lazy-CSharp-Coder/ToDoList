@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
+
+/*  Bruk klasser (class) i CSS istedet for id */
+
+/* BODY */
+
+body {
+  margin: 0;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 0; /* top right bottom left eks 10 15 15 10 - top/bottom - left/right */
+  background-color: grey;
+  height: 100px;
+}
+
+.logoheader {
+  padding: 28px;
+}
+
+.menu {
+  padding-right: 28px;
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* MAIN */
+
+section {
+  height: 100vh;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Source Sans 3';
+  color: white;
+  text-align: center;
+  background-color: gray;
+  height: 100px;
+}
+
+.kodeloftlogo {
+  width: 90px;
+  padding: 28px;
+}
+
+.footertext {
+  color: rgb(220, 220, 220);
+  margin: 0;
+}
+
+.emailandgithub {
+  display: flex;
+  gap: 20px;
+  padding-right: 50px;
+}

@@ -75,12 +75,13 @@ li {
 
 main {
   flex-grow: 1;
+  margin: 30px;
 }
 
 section {
   
   align-items: baseline;
-  height: 100vh;
+
 
  
 }

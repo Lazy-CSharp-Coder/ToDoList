@@ -72,6 +72,25 @@ section {
   height: 100vh;
 }
 
+.priority {
+  align-items: center;
+}
+.priorityList {
+  flex-direction: column;
+}
+
+.highPriorityText {
+  color:var(--highPriorityColor);
+}
+
+.mediumPriorityText {
+  color:var(--mediumPriorityColor);
+}
+
+.lowPriorityText {
+  color:var(--lowPriorityColor);
+}
+
 /* FOOTER */
 
 footer {

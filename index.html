@@ -31,18 +31,23 @@
             <img class="taskDateIcon" src="Icons/calendar.png" alt="fant ikke icons">
             <input type="datetime" name="taskDate" id="taskDate" class="taskDate" placeholder="legg inn dato">
           </label>
-          <div class="taskPriority">
+          <div class="flex taskPriority">
             <img src="Icons/priority.png" alt="fant ikke icon">
-            <label class="flex" for="taskHighPriority">
-              <input type="checkbox" id="taskHighPriority" class="taskHighPriority">
-              <p class=highPriorityText>Høy - må gjøres i dag</p>
-            </label>
-            <label for="taskMediumPriority">
-              <input type="checkbox" id="taskMediumPriority" class="taskMediumPriority">
-            </label>
-            <label for="taskLowPriority">
-              <input type="checkbox" id="taskLowPriority" class="taskLowPriority">
-            </label>
+            <div class="flex priorityList">
+              <p class="priorityText">Prioritet</p>
+               <label class="flex priority" for="taskHighPriority">
+                <input type="checkbox" id="taskHighPriority" class="taskHighPriority">
+                <p class=highPriorityText> Høy - må gjøres i dag </p>
+              </label>
+              <label class="flex priority" for="taskMediumPriority">
+                <input type="checkbox" id="taskMediumPriority" class="taskMediumPriority">
+                <p class=mediumPriorityText>Middels - helst gjøres i dag</p>
+              </label>
+              <label class="flex priority" for="taskLowPriority">
+                <input type="checkbox" id="taskLowPriority" class="taskLowPriority">
+                <p class=lowPriorityText>Lav - ta det når det passer</p>
+              </label>
+            </div>
           </div>  
         </form>
         <!-- Hero / Main / Home -->

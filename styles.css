@@ -32,7 +32,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 0 0 0; /* top right bottom left eks 10 15 15 10 - top/bottom - left/right */
-  background-color: grey;
+  background-color: var(--headerBackgroundColor);
   height: 81px;
 }
 
@@ -47,11 +47,12 @@ header {
 
 }
 
+.toDoText {
+  color:var(--primaryTextColor);
+}
+
 .flex {
   display: flex;
-}
-.menu {
-  padding-right: 28px;
 }
 
 ul {
@@ -129,6 +130,8 @@ section {
 }
 
 .addTaskToListButton {
+  font-family: var(--primaryFontFamily);
+  font-size: 24px;
   width:472px;
   height:54px;
   border-radius: 5px;

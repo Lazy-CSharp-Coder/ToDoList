@@ -147,10 +147,13 @@ section {
 }
 
 .taskPriorityCheck {
-  width: 50px;
+  width:30px;
+  height:30px;
   border-radius: 3px;
-  background-color: aqua;
+
+
 }
+
 .priority {
   align-items: center;
 }
@@ -158,12 +161,14 @@ section {
 .priorityListDiv {
   flex-direction: column;
   justify-content: center;
+
 }
 
 .priorityText {
   color: #40a0dB;
   font-size: 26px;
   margin-top: 2px;
+  padding-left: 110px;
 }
 
 .highPriorityText, .mediumPriorityText, .lowPriorityText {

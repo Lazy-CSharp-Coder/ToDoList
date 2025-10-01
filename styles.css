@@ -244,6 +244,7 @@ section {
   background-color: var(--headerBackgroundColor);
   border: 1px solid var(--primaryTextColor);
   border-radius: 5px;
+  align-items: center;
 }
 
 .taskCompletedImg {

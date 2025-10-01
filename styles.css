@@ -49,6 +49,7 @@ header {
 
 .toDoText {
   color:var(--primaryTextColor);
+  padding:10px;
 }
 
 .flex {
@@ -77,6 +78,39 @@ section {
 .regTaskToDoForm {
   flex-direction: column;
   justify-content: center;
+  gap:24px;
+  
+}
+
+.taskToDoLabel, .taskDateLabel {
+  flex-direction: row;
+  align-items: center;
+}
+
+.taskToDoLabel {
+  gap: 38px;
+}
+
+.taskDateLabel {
+  gap: 48px;
+}
+
+.taskToDo, .taskDate {
+  
+  background-color: lightblue;
+  color:black;
+  padding-left: 20px;
+  border-radius: 5px;
+}
+.taskToDo {
+  width:366px;
+  height:40px;
+ 
+}
+
+.taskDate {
+  width: 114px;
+  height: 40px;
 }
 
 .taskIcon {
@@ -94,12 +128,13 @@ section {
 
 .taskPriorityDiv {
   align-items: center;
-  gap: 48px;
+  gap: 57px;
 }
 
 .priority {
   align-items: center;
 }
+
 .priorityListDiv {
   flex-direction: column;
   justify-content: center;

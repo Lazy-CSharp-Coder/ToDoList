@@ -90,11 +90,14 @@ section {
   width: 62px;
 }
 
+.taskPriorityDiv {
+  align-items: center;
+}
 
 .priority {
   align-items: center;
 }
-.priorityList {
+.priorityListDiv {
   flex-direction: column;
   justify-content: center;
 }

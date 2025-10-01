@@ -4,7 +4,7 @@
 {
   --headerBackgroundColor: #d9d9d9;
   --primaryBackgroudColor: black;
-  --lightModeBackgroundColor: rgb(150,150,150);
+  --lightModeBackgroundColor: rgb(221,221,221);
   --primaryTextColor: #40a0dB;
   --highPriorityColor:#e68f93;
   --mediumPriorityColor:#b3e59f;
@@ -74,6 +74,10 @@ li {
 /* MAIN */
 .lightMode {
   background-color: var(--lightModeBackgroundColor);
+  --headerBackgroundColor: rgb(150, 150, 150);
+  --highPriorityColor:darkred;
+  --mediumPriorityColor: darkgreen;
+  --lowPriorityColor:darkblue;
 }
 
 

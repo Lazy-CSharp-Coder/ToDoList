@@ -1,11 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
+:root
+{
+  --headerBackgroundColor: #d9d9d9;
+  --primaryBackgroudColor: black;
+  --lightModeBackgroundColor: rgb(150,150,150);
+  --primaryTextColor: #40a0dB;
+  --highPriorityColor:#e68f93;
+  --mediumPriorityColor:#b3e59f;
+  --lowPriorityColor:#78affa;
+  --buttonColor:#d9d9d9; 
+  --primaryFontFamily: "Irish Grover";
+  
+ 
+}
+
 /*  Bruk klasser (class) i CSS istedet for id */
 
 /* BODY */
 
 body {
   margin: 0;
+  background-color: var(--primaryBackgroudColor);
 }
 
 /* HEADER */
@@ -16,11 +32,18 @@ header {
   align-items: center;
   padding: 0 0 0 0; /* top right bottom left eks 10 15 15 10 - top/bottom - left/right */
   background-color: grey;
-  height: 100px;
+  height: 81px;
 }
 
-.logoheader {
-  padding: 28px;
+.logoHeader {
+  padding-left: 38px;
+  width : 58px; 
+}
+
+.darkLightIcon {
+  width: 50px;
+  padding-right: 38px;
+
 }
 
 .menu {

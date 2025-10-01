@@ -13,15 +13,39 @@
   <body>
     <header>
       <!-- Logo, bedriftsnavn, navigasjon, temabytter, søkefelt, SoMe -->
-      <img class="logoheader" src="" alt="fant ikke icon" />
+      <img class="logoHeader" src="/Icons/request.png" alt="fant ikke icon" />
+      <h1> Min "to-do" liste</h1>
+      <img class="darkLightIcon" src="/Icons/brightness.png">
       
     </header>
 
     <main>
       <!-- Hovedinnhold: introduksjon, produkt, fremvisning -->
       <section id="hero" class="hero">
+        <form>
+          <label for="taskToDo">
+            <img class="taskIcon" src="Icons/sticky-note.png" alt="fant ikke icon">
+            <input type="text" name="taskToDo" id="taskToDo" class="taskToDo" placeholder="skriv inn hva som må gjøres" minlength="1" maxlength="50">
+          </label>
+          <label for="taskDate">
+            <img class="taskDateIcon" src="Icons/calendar.png" alt="fant ikke icons">
+            <input type="datetime" name="taskDate" id="taskDate" class="taskDate" placeholder="legg inn dato">
+          </label>
+          <div class="taskPriority">
+            <img src="Icons/priority.png" alt="fant ikke icon">
+            <label for="taskHighPriority">
+              <input type="checkbox" id="taskHighPriority" class="taskHighPriority">
+            </label>
+            <label for="taskMediumPriority">
+              <input type="checkbox" id="taskMediumPriority" class="taskMediumPriority">
+            </label>
+            <label for="taskLowPriority">
+              <input type="checkbox" id="taskLowPriority" class="taskLowPriority">
+            </label>
+          </div>  
+        </form>
         <!-- Hero / Main / Home -->
-       
+      </section> 
     </main>
 
     <footer>

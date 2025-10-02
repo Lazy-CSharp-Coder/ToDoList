@@ -80,6 +80,16 @@ addTaskToListButton.addEventListener("click", addTaskToList)
 
 const toDoList = document.querySelector("#toDoList");
 
+function getProperDateString(dateTimeObject)
+{
+    const date = new Date(dateTimeObject);
+    const month = date.getMonth();
+    const day = date.getDay();
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;    
+}
+
+
 function addTaskToList(event)
 {
     event.preventDefault();
@@ -96,7 +106,7 @@ function addTaskToList(event)
 
     const newTask = document.createElement("li");
     // const taskString = taskDateInput + "    -   " + taskToDoInput;
-    newTask.textContent = taskDateInput;
+    newTask.textContent = getProperDateString(taskDateInput);
     
      newTask.classList.add("listElement");
      newTask.style.color = "white";

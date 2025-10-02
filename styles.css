@@ -275,7 +275,7 @@ main {
 .taskDone {
 
   text-decoration: line-through;
-  .listButton { text-decoration: none;}
+  button { text-decoration: none;}
 }
 .listHeadingText {
  padding-left: 20px;

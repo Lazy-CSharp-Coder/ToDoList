@@ -99,6 +99,7 @@ function addTaskToList(event)
     newTask.textContent = taskDateInput;
     
      newTask.classList.add("listElement");
+     newTask.style.color = "white";
 
     // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
 

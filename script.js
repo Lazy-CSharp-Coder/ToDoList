@@ -95,14 +95,21 @@ function addTaskToList(event)
     // lag list element
 
     const newTask = document.createElement("li");
-    const taskString = taskDateInput + "    -   " + taskToDoInput;
-    newTask.textContent = taskString;
+    // const taskString = taskDateInput + "    -   " + taskToDoInput;
+    newTask.textContent = taskDateInput;
     
     if(highPriorityCheck.checked) newTask.style.color = "var(--highPriorityColor)";
     else if(mediumPriorityCheck.checked) newTask.style.color = "var(--mediumPriorityColor)";
          else newTask.style.color = "var(--lowPriorityColor)";
 
     newTask.classList.add("listElement");
+
+    // lag task som p element child - dette fordi jeg trenger mellomromm mellom dato og task
+
+    const taskText = document.createElement("p");
+    taskText.textContent = taskToDoInput;
+
+    newTask.appendChild(taskText);
 
     // lag buttons
 

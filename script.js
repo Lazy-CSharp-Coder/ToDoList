@@ -96,15 +96,19 @@ function addTaskToList(event)
 
     const newTask = document.createElement("li");
     newTask.textContent = taskDateInput + " - " + taskToDoInput;
-    if(highPriorityCheck.checked) newTask.style.color = "--highPriorityColor";
-    else if(mediumPriorityCheck.checked) newTask.style.color = "--mediumPriorityColor";
-         else newTask.style.color = "--lowPriorityColor";
+    if(highPriorityCheck.checked) newTask.style.color = "var(--highPriorityColor)";
+    else if(mediumPriorityCheck.checked) newTask.style.color = "var(--mediumPriorityColor)";
+         else newTask.style.color = "var(--lowPriorityColor)";
+
+    newTask.classList.add("listElement");
 
     // lag buttons
 
     const taskDoneButton = document.createElement("button");
     const deleteButton = document.createElement("button");
 
+    taskDoneButton.classList.add("listButton");
+    deleteButton.classList.add("listButton");
     // legg buttons til list element
 
     newTask.appendChild(taskDoneButton);

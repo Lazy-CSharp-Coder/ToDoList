@@ -227,6 +227,15 @@ main {
 
 }
 
+.listButton {
+  width: 75px;
+  height: 22px;
+}
+
+.listElement {
+  font-size: 15px;
+}
+
 .listHeadingDiv {
   width:100%;
   justify-content: flex-start;

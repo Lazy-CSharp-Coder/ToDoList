@@ -121,20 +121,20 @@ main {
   gap: 48px;
 }
 
-.taskToDo, .taskDate {
+.taskToDoInput, .taskDateInput {
   
   background-color: lightblue;
   color:black;
   padding-left: 10px;
   border-radius: 5px;
 }
-.taskToDo {
+.taskToDoInput {
   width:366px;
   height:40px;
  
 }
 
-.taskDate {
+.taskDateInput {
   width: 80px;
   height: 40px;
 }

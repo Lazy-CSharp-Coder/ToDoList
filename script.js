@@ -64,7 +64,7 @@ class MyTask
     }
     
      setAsCompleted() { this.isCompleted = true; }    
-     getTaskDateAndDescription 
+     getTaskDateAndDescription() 
      { 
         return `$(this.date) - ${this.description}` 
      }
@@ -74,9 +74,42 @@ class MyTask
 // start regisrering av to-do ting
 
 const addTaskToListButton = document.querySelector("#addTaskToListButton");
+addTaskToListButton.addEventListener("click", addTaskToList)
 
+// setter denne globalt, skal brukes flere gange
 
-function addTaskToList()
+const toDoList = document.querySelector("#toDoList");
+
+function addTaskToList(event)
 {
+    event.preventDefault();
+
+    // hent data først
+
+    const taskToDoInput = document.getElementById("taskToDoInput").value;
+    console.log(taskToDoInput);
+
+    const taskDateInput = document.getElementById("taskDateInput").value;
+    console.log(taskDateInput);
+
+    // lag list element
+
+    const newTask = document.createElement("li");
+    newTask.textContent = taskDateInput + " - " + taskToDoInput;
+    if(highPriorityCheck.checked) newTask.style.color = "--highPriorityColor";
+    else if(mediumPriorityCheck.checked) newTask.style.color = "--mediumPriorityColor";
+         else newTask.style.color = "--lowPriorityColor";
+
+    // lag buttons
+
+    const taskDoneButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
+
+    // legg buttons til list element
+
+    newTask.appendChild(taskDoneButton);
+    newTask.appendChild(deleteButton);
+
+    toDoList.appendChild(newTask);
 
 }

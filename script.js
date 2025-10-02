@@ -116,6 +116,9 @@ function addTaskToList(event)
     const taskDoneButton = document.createElement("button");
     const deleteButton = document.createElement("button");
 
+    taskDoneButton.textContent = "Oppdrag utført !";
+    deleteButton.textContent = "Slett meg !"
+
     taskDoneButton.classList.add("listButton");
     deleteButton.classList.add("listButton");
     

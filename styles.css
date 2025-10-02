@@ -32,6 +32,10 @@ body {
   min-height: 100vh; 
 }
 
+p {
+  margin: 5px;
+}
+
 /* HEADER */
 
 header {
@@ -234,17 +238,27 @@ main {
   flex-direction: column;
   padding-left: 17px;
   width: 100%;
+  margin: 0;
+  gap: 10px;
 }
 
 .listButton {
   width: 75px;
-  height: 22px;
+  height: 42px;
+  margin-top: 20px;
+  font-family: var(--primaryFontFamily);
+  font-size: 10px;
 }
 
 .listElement {
  
+  display: grid;
+  grid-template-columns: 100px 402px 120px 120px;
+  margin: 10px;
+  padding: 0;
   font-size: 15px;
-  min-width: 1ch;
+  margin: 0px;
+  align-items: center;
 }
 
 .listHeadingDiv {

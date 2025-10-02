@@ -115,11 +115,11 @@ function addTaskToList(event)
 
     // lag buttons
 
-    const taskDoneButton = document.createElement("button");
-    const deleteButton = document.createElement("button");
+    const taskDoneButton = document.createElement("img");
+    const deleteButton = document.createElement("img");
 
     taskDoneButton.src = "/Icons/check-mark.png";
-    deleteButton.src = "/icons/recycle-bin.png";
+    deleteButton.src = "/Icons/recycle-bin.png";
     // taskDoneButton.textContent = "Oppdrag utført !";
     // deleteButton.textContent = "Slett meg !"
 

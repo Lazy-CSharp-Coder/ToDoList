@@ -249,6 +249,7 @@ main {
   font-family: var(--primaryFontFamily);
   font-size: 10px;
   text-decoration: none;
+  
 }
 
 .listElement {

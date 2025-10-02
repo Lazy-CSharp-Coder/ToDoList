@@ -229,14 +229,19 @@ main {
 
 }
 
+.toDoList {
+  display: flex;
+  flex-direction: column;
+  padding-left: 17px;
+}
+
 .listButton {
   width: 75px;
   height: 22px;
 }
 
 .listElement {
-  display: flex;
-  justify-content: space-between;
+ 
   font-size: 15px;
 }
 

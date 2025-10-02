@@ -1,4 +1,4 @@
-// priority check boxes
+// priority check boxes - sette opp kun en valg mulighet
 
 const highPriorityCheck = document.querySelector("#highPriorityCheck");
 const mediumPriorityCheck = document.querySelector("#mediumPriorityCheck");
@@ -40,3 +40,43 @@ function darkLightModeToggle()
 darkLightIcon.addEventListener("click", darkLightModeToggle);
 
 // end dark/light mode toggle
+
+// klasse for MyTask
+
+const highPriority = 1;
+const mediumPriority = 2;
+const lowPriorty = 3;
+
+
+class MyTask 
+{
+    description;  // beskrivelse av to-do task
+    date;         // dato
+    priority;     // prioritet
+    isCompleted;  // boolean for å skjekke om den er fullført
+
+    constructor(description, date, priority)
+    {
+        this.description = description;
+        this.date = date;
+        this.priority = priority;
+        this.isCompleted = false;
+    }
+    
+     setAsCompleted() { this.isCompleted = true; }    
+     getTaskDateAndDescription 
+     { 
+        return `$(this.date) - ${this.description}` 
+     }
+  
+}
+
+// start regisrering av to-do ting
+
+const addTaskToListButton = document.querySelector("#addTaskToListButton");
+
+
+function addTaskToList()
+{
+
+}

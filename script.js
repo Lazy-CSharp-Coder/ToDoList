@@ -118,8 +118,12 @@ function addTaskToList(event)
     const taskDoneButton = document.createElement("button");
     const deleteButton = document.createElement("button");
 
-    taskDoneButton.src = "/Icons/check-mark.png";
-    deleteButton.src = "/Icons/recycle-bin.png";
+    const taskDoneImg = document.createElement("img");
+    taskDoneImg.src ="/Icons/check-mark.png";
+    taskDoneImg.style.width = "20px";
+
+    taskDoneButton.appendChild(taskDoneImg);
+    // deleteButton.src = "/Icons/recycle-bin.png";
     // taskDoneButton.textContent = "Oppdrag utført !";
     // deleteButton.textContent = "Slett meg !"
 

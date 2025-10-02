@@ -115,8 +115,8 @@ function addTaskToList(event)
 
     // lag buttons
 
-    const taskDoneButton = document.createElement("img");
-    const deleteButton = document.createElement("img");
+    const taskDoneButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
 
     taskDoneButton.src = "/Icons/check-mark.png";
     deleteButton.src = "/Icons/recycle-bin.png";

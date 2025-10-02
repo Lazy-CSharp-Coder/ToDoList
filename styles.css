@@ -248,6 +248,7 @@ main {
   margin-top: 20px;
   font-family: var(--primaryFontFamily);
   font-size: 10px;
+  text-decoration: none;
 }
 
 .listElement {
@@ -271,6 +272,11 @@ main {
   
 }
 
+.taskDone {
+
+  text-decoration: line-through;
+  .listButton { text-decoration: none;}
+}
 .listHeadingText {
  padding-left: 20px;
  

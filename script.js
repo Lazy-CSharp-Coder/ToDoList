@@ -104,7 +104,7 @@ function addTaskToList(event)
 
     newTask.classList.add("listElement");
 
-    // lag task som p element child - dette fordi jeg trenger mellomromm mellom dato og task
+    // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
 
     const taskText = document.createElement("p");
     taskText.textContent = taskToDoInput;
@@ -122,6 +122,8 @@ function addTaskToList(event)
     taskDoneButton.classList.add("listButton");
     deleteButton.classList.add("listButton");
     
+    taskDoneButton.addEventListener("click", function() { this.parentElement.classList.add("taskDone"); });
+    deleteButton.addEventListener("click", function () { this.parentElement.remove();} );
     
     // legg buttons til list element
 
@@ -131,3 +133,4 @@ function addTaskToList(event)
     toDoList.appendChild(newTask);
 
 }
+

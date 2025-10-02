@@ -107,6 +107,11 @@ function addTaskToList(event)
     // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
 
     const taskText = document.createElement("p");
+    
+    if(highPriorityCheck.checked) taskText.style.color = "var(--highPriorityColor)";
+    else if(mediumPriorityCheck.checked) taskText.style.color = "var(--mediumPriorityColor)";
+         else taskText.style.color = "var(--lowPriorityColor)";
+
     taskText.textContent = taskToDoInput;
 
     newTask.appendChild(taskText);

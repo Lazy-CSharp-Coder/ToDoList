@@ -222,7 +222,7 @@ main {
   width: 831px;
   height: 650px;
   background-color: rgb(50, 50, 50);
-  border: 9px solid var(--primaryTextColor);
+  border: 6px solid var(--primaryTextColor);
   border-radius: 5px;
   margin:0px;
 

@@ -109,6 +109,8 @@ function addTaskToList(event)
 
     taskDoneButton.classList.add("listButton");
     deleteButton.classList.add("listButton");
+    
+    
     // legg buttons til list element
 
     newTask.appendChild(taskDoneButton);

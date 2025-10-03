@@ -246,6 +246,24 @@ main {
   border: 1px solid black;
 }
 
+.showErrorMsg {
+  display: block;
+  animation-name: slideInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideInLeft {
+  0% { transform: translateX(-1000);}
+  60% { transform: translateX(50px);}
+  100%{ trasnform: translateX(0); }
+}
+
+
+
+
+
 
 
 

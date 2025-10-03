@@ -83,11 +83,6 @@ class MyTask
 
 let taskRegister = [];
 
-// start regisrering av to-do ting
-
-const addTaskToListButton = document.querySelector("#addTaskToListButton");
-addTaskToListButton.addEventListener("click", addTaskToList)
-
 // setter denne globalt, skal brukes flere ganger
 
 const toDoList = document.querySelector("#toDoList");
@@ -234,7 +229,8 @@ function checkForRegErrors(dateString, taskString)
         
         // vis feilmeldingsboksen
 
-        errorMsgDiv.classList.add("show");
+        // errorMsgDiv.classList.add("show");
+        errorMsgDiv.classList.add("showErrorMsg");
 
         if(dateError)
         {
@@ -260,6 +256,11 @@ function checkForRegErrors(dateString, taskString)
     return 1;
 }
 
+// start regisrering av to-do ting
+
+const addTaskToListButton = document.querySelector("#addTaskToListButton");
+addTaskToListButton.addEventListener("click", addTaskToList)
+
 // funksjon for å hente date og legge et element inn i listen 
 
 function addTaskToList(event)
@@ -279,6 +280,7 @@ function addTaskToList(event)
 
 
     if(checkForRegErrors(taskDateInput, taskToDoInput) == 0) return;
+    
     let priority = 0;
 
     if(highPriorityCheck.checked) { priority = highPriority; }
@@ -304,6 +306,9 @@ function addTaskToList(event)
     taskRegister.push(new MyTask(taskToDoInput, taskDateInput, priority));
 
 }
+
+// denne funksjonen fjerner alle elementer, sorterer listen i taskRegister
+// og legger alle inn på nytt igjen
 
 function sortTasksAndUpdateList() 
 {

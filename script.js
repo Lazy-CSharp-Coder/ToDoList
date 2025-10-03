@@ -179,7 +179,7 @@ function createListElement(date, description, priority)
         {
             let sound;
             if(taskRegister[positionInArray].isCompleted)
-                sound = new Audio("/Audio/taskalready.mp3");
+                sound = new Audio("/Audio/taskalready.mp3"); 
             else
             {
               sound = new Audio("/Audio/taskcompleted.mp3");

@@ -120,7 +120,7 @@ function addTaskToList(event)
          else taskText.style.color = "var(--lowPriorityColor)";
 
     taskText.textContent = taskToDoInput;
-    taskText.style.textAlign = "left";
+   
 
     newTask.appendChild(taskText);
 
@@ -159,6 +159,14 @@ function addTaskToList(event)
     newTask.appendChild(deleteButton);
 
     toDoList.appendChild(newTask);
+
+    // clear form
+
+    taskToDoInput.value = "";
+    taskDateInput.value = "";
+    mediumPriorityCheck.checked = true;
+
+    
 
 }
 

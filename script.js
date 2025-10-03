@@ -180,9 +180,12 @@ function checkForRegErrors(dateString, taskString)
         console.log(errorMsgDiv);
 
         // fjern gamle beskjeder
-
-        while(errorMsgDiv.lastChild) errorMsgDiv.lastChild.remove();
         
+        if(errorMsgDiv.childElementCount > 1)
+           while(errorMsgDiv.lastChild && errorMsgDiv.childElementCount != 1) errorMsgDiv.lastChild.remove();
+        
+        // vis feilmeldingsboksen
+
         errorMsgDiv.classList.add("show");
 
         if(dateError)
@@ -200,8 +203,12 @@ function checkForRegErrors(dateString, taskString)
         }
         return 0;
     }   
+
+    // fjern en eventuell synlig boks
+
     errorMsgDiv.classList.remove("show");
     errorMsgDiv.classList.add("hidden");
+    
     return 1;
 }
 

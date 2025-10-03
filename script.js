@@ -128,9 +128,13 @@ function addTaskToList(event)
     const taskDoneButton = document.createElement("button");
     const deleteButton = document.createElement("button");
 
+    taskDoneButton.style.backgroundColor = "var(--headerBackgroundColor)";
+    deleteButton.style.backgroundColor = "var(--headerBackgroundColor)";
+
     const taskDoneImg = document.createElement("img");
     taskDoneImg.src ="/Icons/taskdone_alpha.png";
     taskDoneImg.style.width = "60px";
+
 
     const deleteImg = document.createElement("img");
     deleteImg.src ="/Icons/slett.png";

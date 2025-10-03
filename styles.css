@@ -223,7 +223,7 @@ main {
 
 .toDoListDiv {
   flex-direction: column;
-  width: 831px;
+  width: 811px;
   height: 650px;
   background-color: rgb(50, 50, 50);
   border: 6px solid var(--primaryTextColor);
@@ -245,7 +245,7 @@ main {
 .listButton {
   width: 75px;
   height: 32px;
-  margin-top: 20px;
+
   font-family: var(--primaryFontFamily);
   font-size: 10px;
   text-decoration: none;
@@ -255,12 +255,12 @@ main {
 .listElement {
  
   display: grid;
-  grid-template-columns: 100px 402px 120px 120px;
+  grid-template-columns: 100px 430px 100px 100px;
   margin: 10px;
   padding: 0;
   font-size: 15px;
   margin: 0px;
-  align-items: center;
+  justify-items: center;
 }
 
 .listHeadingDiv {
@@ -271,6 +271,7 @@ main {
 
    background-color: #add8e6; 
   border: 1px solid black;
+  margin-bottom: 10px;
   
 }
 

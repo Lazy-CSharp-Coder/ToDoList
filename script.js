@@ -327,24 +327,29 @@ function addTaskToList(event)
 // denne funksjonen fjerner alle elementer, sorterer listen i taskRegister
 // og legger alle inn på nytt igjen
 
-function sortTasksAndUpdateList() 
+function animateListOut() 
 {
-    // fjerne alle element i todo listen 
-
-    childNodeList = toDoList.children;
+    const childNodeList = Array.from(toDoList.children);
+    console.log(childNodeList);
     
     let delay = 0;
     const delayInc = 300;
     
-    childNodeList.forEach(function(item) 
+    childNodeList.forEach(function(item, index, array) 
     {
         setTimeout( () => { item.classList.add("removeListItem");}, delay )
+        console.log("er her");
         delay += delayInc;
+        if(index == array.length - 1) item.addEventListener("animationend", sortTasksAndUpdateList, {once:true});
     }
     ); 
 
-    return ;
+}
 
+function sortTasksAndUpdateList() 
+{
+    // fjerne alle element i todo listen 
+  
     while(toDoList.lastChild) 
     {
         toDoList.removeChild(toDoList.lastChild)

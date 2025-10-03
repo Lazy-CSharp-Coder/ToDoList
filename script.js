@@ -120,6 +120,7 @@ function addTaskToList(event)
          else taskText.style.color = "var(--lowPriorityColor)";
 
     taskText.textContent = taskToDoInput;
+    taskText.style.textAlign = "left";
 
     newTask.appendChild(taskText);
 

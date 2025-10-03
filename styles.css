@@ -223,7 +223,7 @@ main {
 
 .toDoListDiv {
   flex-direction: column;
-  width: 811px;
+  width: 780px;
   height: 650px;
   background-color: rgb(50, 50, 50);
   border: 6px solid var(--primaryTextColor);

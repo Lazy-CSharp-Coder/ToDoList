@@ -41,7 +41,7 @@ darkLightIcon.addEventListener("click", darkLightModeToggle);
 
 // end dark/light mode toggle
 
-// klasse for MyTask
+// klasse for MyTask - gjør dette for å gjøre et forsøk på å sortere etter dato i array
 
 const highPriority = 1;
 const mediumPriority = 2;
@@ -54,22 +54,23 @@ class MyTask
     date;         // dato
     priority;     // prioritet
     isCompleted;  // boolean for å skjekke om den er fullført
+    htmlElement;  // html element koblet til denne oppdraget
 
-    constructor(description, date, priority)
+    constructor(description, date, priority, htmlElement)
     {
         this.description = description;
         this.date = date;
         this.priority = priority;
+        this.htmlElement = htmlElement;
         this.isCompleted = false;
     }
     
-     setAsCompleted() { this.isCompleted = true; }    
-     getTaskDateAndDescription() 
-     { 
-        return `$(this.date) - ${this.description}` 
-     }
-  
+    setAsCompleted() { this.isCompleted = true; }    
+    setElement(newHTMLElement) { this.htmlElement = newHTMLElement; }
 }
+
+let taskRegister = [];
+
 
 // start regisrering av to-do ting
 
@@ -96,11 +97,14 @@ function addTaskToList(event)
 
     // hent data først
 
-    const taskToDoInput = document.getElementById("taskToDoInput").value;
-    console.log(taskToDoInput);
+    const taskToDoInputElement = document.getElementById("taskToDoInput");
+    console.log(taskToDoInputElement);
 
-    const taskDateInput = document.getElementById("taskDateInput").value;
-    console.log(taskDateInput);
+    const taskDateInputElement = document.getElementById("taskDateInput");
+    console.log(taskDateInputElement);
+
+    const taskToDoInput = taskToDoInputElement.value;
+    const taskDateInput = taskDateInputElement.value;
 
     // lag list element
 
@@ -114,10 +118,11 @@ function addTaskToList(event)
     // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
 
     const taskText = document.createElement("p");
+    let priority = 0;   // trengs lengre nede for klasse
 
-    if(highPriorityCheck.checked) taskText.style.color = "var(--highPriorityColor)";
-    else if(mediumPriorityCheck.checked) taskText.style.color = "var(--mediumPriorityColor)";
-         else taskText.style.color = "var(--lowPriorityColor)";
+    if(highPriorityCheck.checked) { priority = highPriority; taskText.style.color = "var(--highPriorityColor)"; }
+    else if(mediumPriorityCheck.checked) { priority = mediumPriority; taskText.style.color = "var(--mediumPriorityColor)"; }
+         else { priority = lowPriorty; taskText.style.color = "var(--lowPriorityColor)"; }
 
     taskText.textContent = taskToDoInput;
    
@@ -136,13 +141,13 @@ function addTaskToList(event)
     taskDoneImg.src ="/Icons/taskdone_alpha.png";
     taskDoneImg.style.width = "60px";
 
-
     const deleteImg = document.createElement("img");
     deleteImg.src ="/Icons/slett.png";
     deleteImg.style.width = "60px";
 
     taskDoneButton.appendChild(taskDoneImg);
     deleteButton.appendChild(deleteImg);
+
     // deleteButton.src = "/Icons/recycle-bin.png";
     // taskDoneButton.textContent = "Oppdrag utført !";
     // deleteButton.textContent = "Slett meg !"
@@ -162,11 +167,15 @@ function addTaskToList(event)
 
     // clear form
 
-    taskToDoInput.value = "";
-    taskDateInput.value = "";
+    taskToDoInputElement.value = "";
+    taskDateInputElement.value = "";
     mediumPriorityCheck.checked = true;
+    highPriorityCheck.checked = false;
+    lowPriorityCheck.checked = false;
 
-    
+    // denne seksjonen for fremtidig sortering med klasser i array- registrere task
+
+    taskRegister.push(new MyTask(taskToDoInput,taskDateInput, priority, newTask));
 
 }
 

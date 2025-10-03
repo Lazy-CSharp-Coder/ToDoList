@@ -331,11 +331,14 @@ function sortTasksAndUpdateList()
 {
     // fjerne alle element i todo listen 
 
-    while(toDoList.lastChild) 
+    let counter = toDoList.childElementCount;
+    while(counter != 0) 
     {
-        toDoList.removeChild(toDoList.lastChild);
+        toDoList.lastChild.classList.add("removeListItem");
+        toDoList.lastChild.addEventListener("animationend", function() {  toDoList.removeChild(toDoList.lastChild); }, {once:true});
+        counter--;
     }
-
+    return;
     taskRegister.sort((a, b) => a.date - b.date);
 
     taskRegister.forEach(function(item) 

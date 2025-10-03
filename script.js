@@ -370,4 +370,4 @@ function sortTasksAndUpdateList()
 }
 
 const sortButton = document.querySelector("#sortListButton");
-sortButton.addEventListener("click", sortTasksAndUpdateList);
+sortButton.addEventListener("click", animateListOut);

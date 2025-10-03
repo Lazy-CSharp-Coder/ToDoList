@@ -337,7 +337,7 @@ function animateListOut()
     
     childNodeList.forEach(function(item, index, array) 
     {
-        setTimeout( () => { item.classList.add("removeListItem");}, delay )
+        setTimeout( () => { item.classList.add("removeListItem");}, delay );
         console.log("er her");
         delay += delayInc;
         if(index == array.length - 1) item.addEventListener("animationend", sortTasksAndUpdateList, {once:true});
@@ -357,12 +357,18 @@ function sortTasksAndUpdateList()
     }
 
     taskRegister.sort((a, b) => a.date - b.date);
+    let delay = 0;
+    const delayInc = 300;
 
     taskRegister.forEach(function(item) 
     {
         console.log(item);
         const newTask = createListElement(item.date, item.description, item.priority);
-        if(item.isCompleted) newTask.classList.add("taskDone");
+        setTimeout( function() {      
+            if(item.isCompleted) newTask.classList.add("taskDone");
+            newTask.classList.add("addListItem"); }, delay);
+        delay += delayInc;
+   
         toDoList.appendChild(newTask);
         console.log("er inne i foreach");
 

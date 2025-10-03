@@ -396,7 +396,7 @@ main {
 }
 
 @keyframes slideInBottom {
-  0% { transform:translateY(-1200px);}
+  0% { transform:translateY(1200px);}
   100% { transform:translateY(0); }
 }
 

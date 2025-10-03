@@ -206,6 +206,8 @@ function createListElement(date, description, priority)
 
 // skjekk for feil
 
+let errorOccured = false;
+
 function checkForRegErrors(dateString, taskString)
 {
     let dateError = false;
@@ -219,7 +221,7 @@ function checkForRegErrors(dateString, taskString)
 
     if(dateError || taskLengthError)
     {
-    
+        errorOccured = true;
         console.log(errorMsgDiv);
 
         // fjern gamle beskjeder
@@ -249,9 +251,13 @@ function checkForRegErrors(dateString, taskString)
     }   
 
     // fjern en eventuell synlig boks
-
-    errorMsgDiv.classList.remove("show");
-    errorMsgDiv.classList.add("hidden");
+    if(errorOccured)
+    {
+        errorMsgDiv.classList.add("removeErrorMsg");
+        errorMsgDiv.classList.remove("showErrorMsg");
+        errorMsgDiv.addEventListener("animationend", function()  {errorMsgDiv.classList.add("hidden"); },  { once:true});
+ 
+    }
     
     return 1;
 }

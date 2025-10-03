@@ -81,6 +81,10 @@ li {
 }
 
 /* MAIN */
+
+.hidden {
+  display: none;
+}
 .lightMode {
   background-color: var(--lightModeBackgroundColor);
   --headerBackgroundColor: rgb(160, 160, 160);
@@ -223,8 +227,16 @@ main {
 
 .errorMsgDiv {
   width: 512 px;
-  height: 200px;
-  background-color: lightcoral;
+  height:187px;
+  background-color: rgb(145, 50, 50);
+  border:2px solid #78affa;
+  }
+
+  .errorHeadingText {
+    background-color: #78affa;
+    padding-left: 10px;
+    margin: 0;
+    border: 1px solid black;
   }
 
 

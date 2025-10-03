@@ -337,6 +337,8 @@ function animateListOut()
     
     childNodeList.forEach(function(item, index, array) 
     {
+        item.classList.remove("addListItem");
+        item.classList.remove("removeListItem");
         setTimeout( () => { item.classList.add("removeListItem");}, delay );
         console.log("er her");
         delay += delayInc;
@@ -364,12 +366,16 @@ function sortTasksAndUpdateList()
     {
         console.log(item);
         const newTask = createListElement(item.date, item.description, item.priority);
-        setTimeout( function() {      
+        setTimeout( function() 
+        {      
+      
+            newTask.classList.add("addListItem");
             if(item.isCompleted) newTask.classList.add("taskDone");
-            newTask.classList.add("addListItem"); }, delay);
+            toDoList.appendChild(newTask);
+         }, delay);
+
         delay += delayInc;
-   
-        toDoList.appendChild(newTask);
+     
         console.log("er inne i foreach");
 
     });

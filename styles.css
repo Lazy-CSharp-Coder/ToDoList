@@ -390,6 +390,14 @@ main {
   animation-fill-mode: forwards;
 }
 
+.getTextToListAnim {
+  animation: slideOutLeft;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+
 @keyframes slideOutBottom {
   0% { transform:translateY(0);}
   100% { transform:translateY(1200px); }
@@ -400,6 +408,14 @@ main {
   100% { transform:translateY(0); }
 }
 
+@keyframes slideOutLeft {
+  0% { transform:translateX(0);
+       transform:translateY(0);
+      }
+  30% { transform:translateY(50px);
+       transform:tranlateX(0); }
+  100% { transform:translateX(-1200px);}
+}
 
 
 /* FOOTER */

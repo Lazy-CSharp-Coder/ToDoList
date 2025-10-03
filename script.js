@@ -302,6 +302,7 @@ function addTaskToList(event)
 
     const taskToDoInputElement = document.getElementById("taskToDoInput");
     console.log(taskToDoInputElement);
+    taskToDoInputElement.classList.add("getTextToListAnim");
 
     const taskDateInputElement = document.getElementById("taskDateInput");
     console.log(taskDateInputElement);

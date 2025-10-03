@@ -71,13 +71,12 @@ class MyTask
 
 let taskRegister = [];
 
-
 // start regisrering av to-do ting
 
 const addTaskToListButton = document.querySelector("#addTaskToListButton");
 addTaskToListButton.addEventListener("click", addTaskToList)
 
-// setter denne globalt, skal brukes flere gange
+// setter denne globalt, skal brukes flere ganger
 
 const toDoList = document.querySelector("#toDoList");
 
@@ -90,6 +89,69 @@ function getProperDateString(dateTimeObject)
     return `${day}/${month}/${year}`;    
 }
 
+
+// funskjon for å lage et list element
+
+function createListElement(date, description)
+{
+     const newTask = document.createElement("li");
+    // const taskString = taskDateInput + "    -   " + taskToDoInput;
+    newTask.textContent = getProperDateString(date);
+    
+     newTask.classList.add("listElement");
+     newTask.style.color = "white";
+
+    // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
+
+    const taskText = document.createElement("p");
+    let priority = 0;   // trengs lengre nede for klasse
+
+    if(highPriorityCheck.checked) { priority = highPriority; taskText.style.color = "var(--highPriorityColor)"; }
+    else if(mediumPriorityCheck.checked) { priority = mediumPriority; taskText.style.color = "var(--mediumPriorityColor)"; }
+         else { priority = lowPriorty; taskText.style.color = "var(--lowPriorityColor)"; }
+
+    taskText.textContent = description;
+   
+    newTask.appendChild(taskText);
+
+    // lag buttons
+
+    const taskDoneButton = document.createElement("button");
+    const deleteButton = document.createElement("button");
+
+    taskDoneButton.style.backgroundColor = "var(--headerBackgroundColor)";
+    deleteButton.style.backgroundColor = "var(--headerBackgroundColor)";
+
+    const taskDoneImg = document.createElement("img");
+    taskDoneImg.src ="/Icons/taskdone_alpha.png";
+    taskDoneImg.style.width = "60px";
+
+    const deleteImg = document.createElement("img");
+    deleteImg.src ="/Icons/slett.png";
+    deleteImg.style.width = "60px";
+
+    taskDoneButton.appendChild(taskDoneImg);
+    deleteButton.appendChild(deleteImg);
+
+    // deleteButton.src = "/Icons/recycle-bin.png";
+    // taskDoneButton.textContent = "Oppdrag utført !";
+    // deleteButton.textContent = "Slett meg !"
+
+    taskDoneButton.classList.add("listButton");
+    deleteButton.classList.add("listButton");
+    
+    taskDoneButton.addEventListener("click", function() { this.parentElement.classList.add("taskDone"); });
+    deleteButton.addEventListener("click", function () { this.parentElement.remove();} );
+    
+    // legg buttons til list element
+
+    newTask.appendChild(taskDoneButton);
+    newTask.appendChild(deleteButton);
+
+    return newTask;
+}
+
+// funksjon for å hente date og legge et element inn i listen 
 
 function addTaskToList(event)
 {
@@ -107,6 +169,8 @@ function addTaskToList(event)
     const taskDateInput = taskDateInputElement.value;
 
     // lag list element
+
+    /*
 
     const newTask = document.createElement("li");
     // const taskString = taskDateInput + "    -   " + taskToDoInput;
@@ -162,6 +226,8 @@ function addTaskToList(event)
 
     newTask.appendChild(taskDoneButton);
     newTask.appendChild(deleteButton);
+    */
+    const newTask = createListElement(taskDateInput, taskToDoInput);
 
     toDoList.appendChild(newTask);
 
@@ -176,6 +242,19 @@ function addTaskToList(event)
     // denne seksjonen for fremtidig sortering med klasser i array- registrere task
 
     taskRegister.push(new MyTask(taskToDoInput,taskDateInput, priority, newTask));
+
+}
+
+function sortTasksAndUpdateList() 
+{
+    // fjerne alle element i todo listen 
+
+    while(toDoList.lastChild) 
+    {
+        toDoList.removeChild(toDoList.lastChild);
+    }
+
+    taskRegister.sort((a, b) => a.date - b.date);
 
 }
 

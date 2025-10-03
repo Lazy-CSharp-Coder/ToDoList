@@ -241,7 +241,7 @@ function addTaskToList(event)
 
     // denne seksjonen for fremtidig sortering med klasser i array- registrere task
 
-    taskRegister.push(new MyTask(taskToDoInput, taskDateInput, priority, newTask));
+    taskRegister.push(new MyTask(taskToDoInput, taskDateInput, 2, newTask));
 
 }
 
@@ -258,8 +258,10 @@ function sortTasksAndUpdateList()
 
     taskRegister.forEach(function(item) 
     {
-        const newTask = createListElement(item.Date, item.description);
+        console.log(item);
+        const newTask = createListElement(item.date, item.description);
         toDoList.appendChild(newTask);
+        console.log("er inne i foreach");
 
     });
 }

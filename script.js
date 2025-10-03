@@ -232,7 +232,9 @@ function checkForRegErrors(dateString, taskString)
         // vis feilmeldingsboksen
 
         // errorMsgDiv.classList.add("show");
+        errorMsgDiv.classList.remove("removeErrorMsg");
         errorMsgDiv.classList.add("showErrorMsg");
+        errorMsgDiv.classList.remove("hidden");
 
         if(dateError)
         {
@@ -253,11 +255,19 @@ function checkForRegErrors(dateString, taskString)
     // fjern en eventuell synlig boks
     if(errorOccured)
     {
-        errorMsgDiv.classList.remove("showErrorMsg");
+
         errorMsgDiv.classList.add("removeErrorMsg");
+     
         console.log("er her");
-        errorMsgDiv.addEventListener("animationend", function()  {errorMsgDiv.classList.add("hidden"); },  { once:true});
- 
+        errorMsgDiv.addEventListener("animationend", function()  
+           {
+             errorMsgDiv.classList.remove("showErrorMsg");
+             errorMsgDiv.classList.add("hidden"); 
+
+           },{ once:true} );
+
+    
+         errorOccured = false;
     }
     
     return 1;

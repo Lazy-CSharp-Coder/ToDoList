@@ -263,13 +263,13 @@ main {
 
 @keyframes slideInLeft {
   0% { transform: translateX(-1000px);}
-  60% { transform: translateX(10px);}
+  60% { transform: translateX(20px);}
   100%{ trasnform: translateX(0); }
 }
 
 @keyframes slideOutLeft {
   0% { transform: translateX(0);}
-  20% { transform: translateX(10px);}
+  20% { transform: translateX(20px);}
   100% { transform: translateX(-1000px);}
 }
 

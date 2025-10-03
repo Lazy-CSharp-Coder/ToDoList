@@ -173,6 +173,8 @@ function createListElement(date, description, priority)
     taskDoneButton.addEventListener("click", function() 
     { 
         this.parentElement.classList.add("taskDone"); 
+        let sound = new Audio("/Audio/taskcompleted.mp3");
+        sound.play();
         const positionInArray = findMyPosition(this.parentElement);
         console.log("posisjon er : " + positionInArray);
         if(positionInArray != -1) taskRegister[positionInArray].setAsCompleted();

@@ -185,7 +185,19 @@ function createListElement(date, description, priority)
 
     deleteButton.addEventListener("click", function () 
     {  
-        this.parentElement.remove();
+        const positionInArray = findMyPosition(this.parentElement);
+        console.log("posisjon er : " + positionInArray);
+        if(positionInArray != -1)
+            if(taskRegister[positionInArray].isCompleted) 
+            {
+               this.parentElement.remove();
+               taskRegister.splice(positionInArray, 1);
+            }
+            else
+            {
+                // legg inn noe rart her som sier at du må gjøre det du har satt opp
+
+            }
     
     });
     

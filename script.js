@@ -8,11 +8,23 @@ mediumPriorityCheck.checked = true;
 
 console.log(highPriorityCheck + mediumPriorityCheck + lowPriorityCheck);
 
-highPriorityCheck.addEventListener("change", function() { mediumPriorityCheck.checked = false; lowPriorityCheck.checked = false; });
-mediumPriorityCheck.addEventListener("change", function() { highPriorityCheck.checked = false; lowPriorityCheck.checked = false; });
-lowPriorityCheck.addEventListener("change", function() { highPriorityCheck.checked = false; mediumPriorityCheck.checked = false; });
+highPriorityCheck.addEventListener("change", function() 
+{ 
+    if(highPriorityCheck.checked == false) highPriorityCheck.checked = true;
+    mediumPriorityCheck.checked = false; lowPriorityCheck.checked = false; 
+});
 
+mediumPriorityCheck.addEventListener("change", function() 
+{ 
+    if(mediumPriorityCheck.checked == false) mediumPriorityCheck.checked = true;
+    highPriorityCheck.checked = false; lowPriorityCheck.checked = false; 
+});
 
+lowPriorityCheck.addEventListener("change", function() 
+{ 
+    if(lowPriorityCheck.checked == false) lowPriorityCheck.checked = true;
+    highPriorityCheck.checked = false; mediumPriorityCheck.checked = false; 
+});
 
 // end priority check box rutiner
 

@@ -89,6 +89,7 @@ li {
 .show {
   display: block;
 }
+
 .lightMode {
   background-color: var(--lightModeBackgroundColor);
   --headerBackgroundColor: rgb(160, 160, 160);
@@ -234,14 +235,16 @@ main {
   height:187px;
   background-color: rgb(145, 50, 50);
   border:2px solid #78affa;
+  color:white;
   }
 
-  .errorHeadingText {
-    background-color: #78affa;
-    padding-left: 10px;
-    margin: 0;
-    border: 1px solid black;
-  }
+.errorHeadingText {
+  background-color: #78affa;
+  color:black;
+  padding-left: 10px;
+  margin: 0;
+  border: 1px solid black;
+}
 
 
 

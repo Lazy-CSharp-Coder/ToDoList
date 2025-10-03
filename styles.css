@@ -392,9 +392,13 @@ main {
 
 .getTextToListAnim {
   animation: slideOutLeft;
-  animation-duration: 1.2s;
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+}
+
+.rotateStickyNote {
+
 }
 
 
@@ -412,9 +416,11 @@ main {
   0% { transform:translateX(0);
        transform:translateY(0);
       }
-  30% { transform:translateY(50px);
+  15% { transform:translateY(50px);
        transform:tranlateX(0); }
-  100% { transform:translateX(-1200px);}
+  50% { transform:translateX(-1200px);}
+  100% { transform: translateY(0);
+         transform:translateX(0);}
 }
 
 

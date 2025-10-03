@@ -378,14 +378,14 @@ main {
 
 .removeListItem {
   animation: slideOutBottom;
-  animation-duration: 1s;
+  animation-duration: 0.6s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
 }
 
 @keyframes slideOutBottom {
   0% { transform:translateY(0);}
-  100% { transform:translateY(1000px); }
+  100% { transform:translateY(1200px); }
 }
 
 

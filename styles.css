@@ -219,6 +219,17 @@ main {
   margin-top: 23px;
 }
 
+/* div for feilmeldinger - er tom og skal i utgangspunktet være hidden */
+
+.errorMsgDiv {
+  width: 512 px;
+  height: 200px;
+  background-color: lightcoral;
+  }
+
+
+
+
 /* så over til selve listen og knappene til den */
 
 .toDoListDiv {

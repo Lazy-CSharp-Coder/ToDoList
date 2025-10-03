@@ -185,63 +185,6 @@ function addTaskToList(event)
     
          // lag list element
 
-    /*
-
-    const newTask = document.createElement("li");
-    // const taskString = taskDateInput + "    -   " + taskToDoInput;
-    newTask.textContent = getProperDateString(taskDateInput);
-    
-     newTask.classList.add("listElement");
-     newTask.style.color = "white";
-
-    // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
-
-    const taskText = document.createElement("p");
-    let priority = 0;   // trengs lengre nede for klasse
-
-    if(highPriorityCheck.checked) { priority = highPriority; taskText.style.color = "var(--highPriorityColor)"; }
-    else if(mediumPriorityCheck.checked) { priority = mediumPriority; taskText.style.color = "var(--mediumPriorityColor)"; }
-         else { priority = lowPriorty; taskText.style.color = "var(--lowPriorityColor)"; }
-
-    taskText.textContent = taskToDoInput;
-   
-
-    newTask.appendChild(taskText);
-
-    // lag buttons
-
-    const taskDoneButton = document.createElement("button");
-    const deleteButton = document.createElement("button");
-
-    taskDoneButton.style.backgroundColor = "var(--headerBackgroundColor)";
-    deleteButton.style.backgroundColor = "var(--headerBackgroundColor)";
-
-    const taskDoneImg = document.createElement("img");
-    taskDoneImg.src ="/Icons/taskdone_alpha.png";
-    taskDoneImg.style.width = "60px";
-
-    const deleteImg = document.createElement("img");
-    deleteImg.src ="/Icons/slett.png";
-    deleteImg.style.width = "60px";
-
-    taskDoneButton.appendChild(taskDoneImg);
-    deleteButton.appendChild(deleteImg);
-
-    // deleteButton.src = "/Icons/recycle-bin.png";
-    // taskDoneButton.textContent = "Oppdrag utført !";
-    // deleteButton.textContent = "Slett meg !"
-
-    taskDoneButton.classList.add("listButton");
-    deleteButton.classList.add("listButton");
-    
-    taskDoneButton.addEventListener("click", function() { this.parentElement.classList.add("taskDone"); });
-    deleteButton.addEventListener("click", function () { this.parentElement.remove();} );
-    
-    // legg buttons til list element
-
-    newTask.appendChild(taskDoneButton);
-    newTask.appendChild(deleteButton);
-    */
     const newTask = createListElement(taskDateInput, taskToDoInput, priority);
 
     toDoList.appendChild(newTask);

@@ -161,6 +161,50 @@ function createListElement(date, description, priority)
     return newTask;
 }
 
+// skjekk for feil
+
+function checkForRegErrors(dateString, taskString)
+{
+    let dateError = false;
+    let taskLengthError = false;
+
+    const dateObject = new Date(dateString);
+    if(isNaN(dateObject.valueOf())) dateError = true;
+    if(taskString.length < 2) taskLengthError = true;
+
+    const errorMsgDiv = document.querySelector("#errorMsgDiv");
+
+    if(dateError || taskLengthError)
+    {
+    
+        console.log(errorMsgDiv);
+
+        // fjern gamle beskjeder
+
+        while(errorMsgDiv.lastChild) errorMsgDiv.lastChild.remove();
+        
+        errorMsgDiv.classList.add("show");
+
+        if(dateError)
+        {
+            console.log("er i dateError");
+            const dateErrorMsg = document.createElement("p");
+            dateErrorMsg.textContent = "Datoformatet er feil."
+            errorMsgDiv.appendChild(dateErrorMsg);
+        }
+        if(taskLengthError)
+        {
+            const taskErrorMsg = document.createElement("p");
+            taskErrorMsg.textContent = "Oppgaven som skal registreres må inneholde minst 2 tegn";
+            errorMsgDiv.appendChild(taskErrorMsg);
+        }
+        return 0;
+    }   
+    errorMsgDiv.classList.remove("show");
+    errorMsgDiv.classList.add("hidden");
+    return 1;
+}
+
 // funksjon for å hente date og legge et element inn i listen 
 
 function addTaskToList(event)
@@ -177,6 +221,9 @@ function addTaskToList(event)
 
     const taskToDoInput = taskToDoInputElement.value;
     const taskDateInput = taskDateInputElement.value;
+
+
+    if(checkForRegErrors(taskDateInput, taskToDoInput) == 0) return;
     let priority = 0;
 
     if(highPriorityCheck.checked) { priority = highPriority; }

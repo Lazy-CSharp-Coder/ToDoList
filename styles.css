@@ -85,6 +85,10 @@ li {
 .hidden {
   display: none;
 }
+
+.show {
+  display: block;
+}
 .lightMode {
   background-color: var(--lightModeBackgroundColor);
   --headerBackgroundColor: rgb(160, 160, 160);

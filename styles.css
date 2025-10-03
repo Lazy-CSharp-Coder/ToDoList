@@ -321,7 +321,7 @@ main {
   width:100%;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+
   height: fit-content;
 
    background-color: #add8e6; 
@@ -330,6 +330,9 @@ main {
   
 }
 
+.listTextDiv {
+  gap: 22px;
+}
 .sortListButton {
   font-family: var(--primaryFontFamily);
   margin-right: 73px;

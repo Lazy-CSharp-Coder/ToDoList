@@ -129,10 +129,15 @@ function addTaskToList(event)
     const deleteButton = document.createElement("button");
 
     const taskDoneImg = document.createElement("img");
-    taskDoneImg.src ="/Icons/check-mark.png";
-    taskDoneImg.style.width = "20px";
+    taskDoneImg.src ="/Icons/taskdone_alpha.png";
+    taskDoneImg.style.width = "60px";
+
+    const deleteImg = document.createElement("img");
+    deleteImg.src ="/Icons/slett.png";
+    deleteImg.style.width = "60px";
 
     taskDoneButton.appendChild(taskDoneImg);
+    deleteButton.appendChild(deleteImg);
     // deleteButton.src = "/Icons/recycle-bin.png";
     // taskDoneButton.textContent = "Oppdrag utført !";
     // deleteButton.textContent = "Slett meg !"

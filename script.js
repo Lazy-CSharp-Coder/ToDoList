@@ -253,8 +253,9 @@ function checkForRegErrors(dateString, taskString)
     // fjern en eventuell synlig boks
     if(errorOccured)
     {
-        errorMsgDiv.classList.add("removeErrorMsg");
         errorMsgDiv.classList.remove("showErrorMsg");
+        errorMsgDiv.classList.add("removeErrorMsg");
+        console.log("er her");
         errorMsgDiv.addEventListener("animationend", function()  {errorMsgDiv.classList.add("hidden"); },  { once:true});
  
     }

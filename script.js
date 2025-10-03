@@ -102,6 +102,19 @@ function getProperDateString(dateTimeString)
 }
 
 
+// funksjon for å finne ut hvilket child nr element noden er 
+
+function findMyPosition(node)
+{
+    const parent = node.parentNode;
+    if(!parent) return -1;
+
+    const children = Array.from(parent.children);
+    console.log(children);
+    
+    return children.indexOf(node);
+}
+
 // funskjon for å lage et list element
 
 function createListElement(date, description, priority)
@@ -162,8 +175,19 @@ function createListElement(date, description, priority)
     taskDoneButton.classList.add("listButton");
     deleteButton.classList.add("listButton");
     
-    taskDoneButton.addEventListener("click", function() { this.parentElement.classList.add("taskDone"); });
-    deleteButton.addEventListener("click", function () { this.parentElement.remove();} );
+    taskDoneButton.addEventListener("click", function() 
+    { 
+        this.parentElement.classList.add("taskDone"); 
+        const positionInArray = findMyPosition(this.parentElement);
+        console.log("posisjon er : " + positionInArray);
+        if(positionInArray != -1) taskRegister[positionInArray].setAsCompleted();
+    });
+
+    deleteButton.addEventListener("click", function () 
+    {  
+        this.parentElement.remove();
+    
+    });
     
     // legg buttons til list element
 
@@ -284,6 +308,7 @@ function sortTasksAndUpdateList()
     {
         console.log(item);
         const newTask = createListElement(item.date, item.description, item.priority);
+        if(item.isCompleted) newTask.classList.add("taskDone");
         toDoList.appendChild(newTask);
         console.log("er inne i foreach");
 

@@ -265,7 +265,8 @@ main {
 
 .listHeadingDiv {
   width:100%;
-  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
   gap: 30px;
   height: fit-content;
 
@@ -273,6 +274,12 @@ main {
   border: 1px solid black;
   margin-bottom: 10px;
   
+}
+
+.sortListButton {
+  font-family: var(--primaryFontFamily);
+  margin-right: 20px;
+  /* height: 20px; */
 }
 
 .taskDone {

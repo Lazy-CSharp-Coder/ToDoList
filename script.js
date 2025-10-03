@@ -54,7 +54,7 @@ class MyTask
     date;         // dato
     priority;     // prioritet
     isCompleted;  // boolean for å skjekke om den er fullført
-    htmlElement;  // html element koblet til denne oppdraget
+    htmlElement;  // html element koblet til denne oppdraget - kan bli brukbar fremover
 
     constructor(description, date, priority, htmlElement)
     {
@@ -241,7 +241,7 @@ function addTaskToList(event)
 
     // denne seksjonen for fremtidig sortering med klasser i array- registrere task
 
-    taskRegister.push(new MyTask(taskToDoInput,taskDateInput, priority, newTask));
+    taskRegister.push(new MyTask(taskToDoInput, taskDateInput, priority, newTask));
 
 }
 
@@ -256,5 +256,13 @@ function sortTasksAndUpdateList()
 
     taskRegister.sort((a, b) => a.date - b.date);
 
+    taskRegister.forEach(function(item) 
+    {
+        const newTask = createListElement(item.Date, item.description);
+        toDoList.appendChild(newTask);
+
+    });
 }
 
+const sortButton = document.querySelector("#sortListButton");
+sortButton.addEventListener("click", sortTasksAndUpdateList);

@@ -397,6 +397,16 @@ main {
   animation-fill-mode: forwards;
 }
 
+/* prøve dette i morgen - label skal ha position: relative */
+
+.textOverlaySpan {
+  position: absolute;
+  top : 0;
+  left : 0;
+  color:black;
+  opacity:0;
+}
+
 .rotateStickyNote {
 
 }

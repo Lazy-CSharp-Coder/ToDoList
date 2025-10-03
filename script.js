@@ -56,10 +56,10 @@ class MyTask
     isCompleted;  // boolean for å skjekke om den er fullført
     // htmlElement;  // html element koblet til denne oppdraget - kan bli brukbar fremover
 
-    constructor(description, date, priority)
+    constructor(description, dateTimeString, priority)
     {
         this.description = description;
-        this.date = date;
+        this.date = new Date(dateTimeString);
         this.priority = priority;
         // this.htmlElement = htmlElement;
         this.isCompleted = false;
@@ -80,9 +80,9 @@ addTaskToListButton.addEventListener("click", addTaskToList)
 
 const toDoList = document.querySelector("#toDoList");
 
-function getProperDateString(dateTimeObject)
+function getProperDateString(dateTimeString)
 {
-    const date = new Date(dateTimeObject);
+    const date = new Date(dateTimeString);
     const month = date.getMonth()+1;
     const day = date.getDate();
     const year = date.getFullYear();
@@ -104,7 +104,6 @@ function createListElement(date, description, priority)
     // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
 
     const taskText = document.createElement("p");
-    let priority = 0;   // trengs lengre nede for klasse
 
     taskText.textContent = description;
    
@@ -275,7 +274,7 @@ function sortTasksAndUpdateList()
     taskRegister.forEach(function(item) 
     {
         console.log(item);
-        const newTask = createListElement(item.date, item.description);
+        const newTask = createListElement(item.date, item.description, item.priority);
         toDoList.appendChild(newTask);
         console.log("er inne i foreach");
 

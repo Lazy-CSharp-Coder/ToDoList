@@ -173,11 +173,23 @@ function createListElement(date, description, priority)
     taskDoneButton.addEventListener("click", function() 
     { 
         this.parentElement.classList.add("taskDone"); 
-        let sound = new Audio("/Audio/taskcompleted.mp3");
-        sound.play();
+        
         const positionInArray = findMyPosition(this.parentElement);
+        if(positionInArray != -1)
+        {
+            let sound;
+            if(taskRegister[positionInArray].isCompleted)
+                sound = new Audio("/Audio/taskalready.mp3");
+            else
+            {
+              sound = new Audio("/Audio/taskcompleted.mp3");
+              taskRegister[positionInArray].setAsCompleted();
+            }
+            sound.play();
+           
+        }
+
         console.log("posisjon er : " + positionInArray);
-        if(positionInArray != -1) taskRegister[positionInArray].setAsCompleted();
     });
 
     deleteButton.addEventListener("click", function () 

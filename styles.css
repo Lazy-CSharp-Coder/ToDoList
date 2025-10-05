@@ -391,10 +391,10 @@ main {
 }
 
 .getTextToListAnim {
-  animation: slideOutLeft;
+  /* animation: slideOutLeft;
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
+  animation-fill-mode: forwards; */
 }
 
 /* prøve dette i morgen - label skal ha position: relative */
@@ -422,16 +422,6 @@ main {
   100% { transform:translateY(0); }
 }
 
-@keyframes slideOutLeft {
-  0% { transform:translateX(0);
-       transform:translateY(0);
-      }
-  15% { transform:translateY(50px);
-       transform:tranlateX(0); }
-  50% { transform:translateX(-1200px);}
-  100% { transform: translateY(0);
-         transform:translateX(0);}
-}
 
 
 /* FOOTER */

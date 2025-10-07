@@ -91,12 +91,13 @@ li {
 }
 
 .lightMode {
-  background-color: var(--lightModeBackgroundColor);
+
   --headerBackgroundColor: rgb(160, 160, 160);
   --highPriorityColor:darkred;
   --mediumPriorityColor: darkgreen;
   --lowPriorityColor:darkblue;
   --primaryTextColor:darkblue;
+  --primaryBackgroundColor: var(--lightModeBackgroundColor);
 }
 
 

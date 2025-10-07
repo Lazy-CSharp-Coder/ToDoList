@@ -153,7 +153,7 @@ function createListElement(date, description, priority)
     deleteButton.style.backgroundColor = "var(--headerBackgroundColor)";
 
     const taskDoneImg = document.createElement("img");
-    taskDoneImg.src ="/Icons/taskdone_alpha.png";
+    taskDoneImg.src ="/Icons/taskdone.png";
     taskDoneImg.style.width = "60px";
 
     const deleteImg = document.createElement("img");

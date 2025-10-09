@@ -403,3 +403,20 @@ function sortTasksAndUpdateList()
 
 const sortButton = document.querySelector("#sortListButton");
 sortButton.addEventListener("click", animateListOut);
+
+let isCreditShowing = false;
+
+const creditButton = document.querySelector("#creditButton");
+creditButton.addEventListener("click", function() {
+    const creditIconDiv = document.querySelector("#creditIconDiv");
+    if(!isCreditShowing)
+    {
+     creditIconDiv.classList.remove("hidden");
+     isCreditShowing = true;
+    }
+    else 
+    {
+        creditIconDiv.classList.add("hidden");
+        isCreditShowing = false;
+    }
+});

@@ -213,7 +213,7 @@ function createListElement(date, description, priority)
     });
     
     // legg buttons til list element
-
+    newTask.classList.add("fadeInListItem");
     newTask.appendChild(taskDoneButton);
     newTask.appendChild(deleteButton);
 

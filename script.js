@@ -359,6 +359,7 @@ function animateListOut()
     
     childNodeList.forEach(function(item, index, array) 
     {
+        item.classList.remove("fadeInListItem");
         item.classList.remove("addListItem");
         item.classList.remove("removeListItem");
         setTimeout( () => { item.classList.add("removeListItem");}, delay );

@@ -412,6 +412,7 @@ creditButton.addEventListener("click", function() {
     if(!isCreditShowing)
     {
      creditIconDiv.classList.remove("hidden");
+     c
      isCreditShowing = true;
     }
     else 

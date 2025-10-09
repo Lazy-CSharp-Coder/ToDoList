@@ -90,6 +90,10 @@ li {
   display: block;
 }
 
+.showCredit {
+  display: flex;
+}
+
 .lightMode {
 
   --headerBackgroundColor: rgb(160, 160, 160);

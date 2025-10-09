@@ -409,7 +409,7 @@ main {
 .fadeInListItem {
   animation-name: fadeIn;
   animation-duration: 1s;
-  animation-delay: 1s;
+  animation-delay: 2s;
   animation-fill-mode: forwards;
 
 }
@@ -421,7 +421,7 @@ main {
 
 .fadeOutReg {
   animation-name: fadeOut;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-fill-mode: forwards;
 
 }

@@ -393,6 +393,20 @@ main {
   animation-fill-mode: forwards;
 }
 
+.creditIconDiv 
+{
+  background-color: var(--headerBackgroundColor);
+  flex-direction: column;
+  padding: 25px;
+
+}
+
+
+
+
+
+
+
 .getTextToListAnim {
   /* animation: slideOutLeft;
   animation-duration: 2s;
@@ -413,6 +427,9 @@ main {
 .rotateStickyNote {
 
 }
+
+/* kutter ut det ovenfor */
+
 
 
 @keyframes slideOutBottom {
@@ -438,6 +455,12 @@ footer {
   background-color: var(--headerBackgroundColor);
   height: 81px;
   margin:0;
+}
+
+.creditButton {
+  font-family: var(--primaryFontFamily);
+  width: 150px;
+  height: 30px;
 }
 
 .kodeloftLogoImg {

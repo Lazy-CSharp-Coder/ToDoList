@@ -204,6 +204,8 @@ function createListElement(date, description, priority)
             }
             else
             {
+                sound = new Audio("/Audio/taskmustbecompleted.mp3"); 
+                sound.play();
                 // legg inn noe rart her som sier at du må gjøre det du har satt opp
 
             }
@@ -349,6 +351,9 @@ function animateListOut()
     
     let delay = 0;
     const delayInc = 300;
+
+    sound = new Audio("/Audio/sortinglist.mp3"); 
+    sound.play();
     
     childNodeList.forEach(function(item, index, array) 
     {

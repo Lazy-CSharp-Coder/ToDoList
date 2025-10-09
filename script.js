@@ -312,6 +312,8 @@ function addTaskToList(event)
     const taskToDoInput = taskToDoInputElement.value;
     const taskDateInput = taskDateInputElement.value;
 
+    taskDateInputElement.classList.add("fadeOutReg");
+    taskToDoInputElement.classList.add("fadeOutReg");
 
     if(checkForRegErrors(taskDateInput, taskToDoInput) == 0) return;
     

@@ -415,13 +415,17 @@ creditButton.addEventListener("click", function() {
     const creditIconDiv = document.querySelector("#creditIconDiv");
     if(!isCreditShowing)
     {
-     
+     creditIconDiv.remove("fadeOut");
      creditIconDiv.classList.remove("hidden");
+     creditIconDiv.classList.add("fadeIn");
      isCreditShowing = true;
     }
     else 
     {
-        creditIconDiv.classList.add("hidden");
+        creditIconDiv.classList.remove("fadeIn");
+        creditIconDiv.classList.add("fadeOut");
+        creditIconDiv.addEventListener("animationend", function() {  creditIconDiv.classList.add("hidden"); }, { once: true });
+
         isCreditShowing = false;
     }
 });

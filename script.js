@@ -425,7 +425,7 @@ creditButton.addEventListener("click", function() {
     {
         creditIconDiv.classList.remove("fadeIn");
         creditIconDiv.classList.add("fadeOut");
-        creditIconDiv.addEventListener("animationend", function() {  creditIconDiv. }, { once: true });
+        creditIconDiv.addEventListener("animationend", function() {  creditIconDiv.classList.add("hidden"); }, { once: true });
         isCreditShowing = false;
     }
 });

@@ -322,6 +322,7 @@ main {
   font-size: 15px;
   margin: 0px;
   justify-items: left;
+  opacity: 0;
 }
 
 .listHeadingDiv {
@@ -409,7 +410,7 @@ main {
 .fadeInListItem {
   animation-name: fadeIn;
   animation-duration: 1s;
-  animation-delay: 2s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 
 }
@@ -421,7 +422,7 @@ main {
 
 .fadeOutReg {
   animation-name: fadeOut;
-  animation-duration: 1s;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
 
 }

@@ -415,7 +415,7 @@ creditButton.addEventListener("click", function() {
     const creditIconDiv = document.querySelector("#creditIconDiv");
     if(!isCreditShowing)
     {
-     creditIconDiv.remove("fadeOut");
+    //  creditIconDiv.remove("fadeOut");
      creditIconDiv.classList.remove("hidden");
      creditIconDiv.classList.add("fadeIn");
      isCreditShowing = true;

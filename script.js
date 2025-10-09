@@ -124,7 +124,7 @@ function createListElement(date, description, priority)
     // lag task som p element child - dette fordi jeg trenger å separere dato og task - grid
 
     const taskText = document.createElement("p");
-
+    taskText.style.textAlign = "left";
     taskText.textContent = description;
    
     newTask.appendChild(taskText);
@@ -415,7 +415,7 @@ creditButton.addEventListener("click", function() {
     const creditIconDiv = document.querySelector("#creditIconDiv");
     if(!isCreditShowing)
     {
-    //  creditIconDiv.remove("fadeOut");
+     creditIconDiv.remove("fadeOut");
      creditIconDiv.classList.remove("hidden");
      creditIconDiv.classList.add("fadeIn");
      isCreditShowing = true;
@@ -424,8 +424,7 @@ creditButton.addEventListener("click", function() {
     {
         creditIconDiv.classList.remove("fadeIn");
         creditIconDiv.classList.add("fadeOut");
-        creditIconDiv.addEventListener("animationend", function() {  creditIconDiv.classList.add("hidden"); }, { once: true });
-
+        creditIconDiv.addEventListener("animationend", function() {  creditIconDiv. }, { once: true });
         isCreditShowing = false;
     }
 });

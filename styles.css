@@ -263,8 +263,8 @@ main {
 
 .removeErrorMsg {
   animation-name: slideOutLeft;
-  animation-duration: 1.2s;
-  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
   animation-fill-mode: forwards;
 }
 

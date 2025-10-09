@@ -109,7 +109,7 @@ li {
 
 
 main {
-  height: 100%;
+  height:max-content;
   /* margin: 40px; */
 }
 

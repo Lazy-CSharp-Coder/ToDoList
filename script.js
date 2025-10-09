@@ -213,7 +213,7 @@ function createListElement(date, description, priority)
     });
     
     // legg buttons til list element
-    newTask.classList.add("fadeInListItem");
+    // newTask.classList.add("fadeInListItem");
     newTask.appendChild(taskDoneButton);
     newTask.appendChild(deleteButton);
 
@@ -360,7 +360,7 @@ function animateListOut()
     
     childNodeList.forEach(function(item, index, array) 
     {
-        item.classList.remove("fadeInListItem");
+        // item.classList.remove("fadeInListItem");
         item.classList.remove("addListItem");
         item.classList.remove("removeListItem");
         setTimeout( () => { item.classList.add("removeListItem");}, delay );

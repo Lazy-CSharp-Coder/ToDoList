@@ -409,8 +409,8 @@ main {
 
 .fadeInListItem {
   animation-name: fadeIn;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  animation-duration: 1.2s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
 
 }

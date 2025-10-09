@@ -418,6 +418,7 @@ creditButton.addEventListener("click", function() {
      creditIconDiv.remove("fadeOut");
      creditIconDiv.classList.remove("hidden");
      creditIconDiv.classList.add("fadeIn");
+    
      isCreditShowing = true;
     }
     else 

@@ -398,7 +398,8 @@ main {
   background-color: var(--headerBackgroundColor);
   flex-direction: column;
   padding: 25px;
-
+  width:fit-content;
+  align-self: center;
 }
 
 

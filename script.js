@@ -343,7 +343,7 @@ function addTaskToList(event)
 
 }
 
-// denne funksjonen fjerner alle elementer, sorterer listen i taskRegister
+// disse 2 funksjonene fjerner alle elementer, sorterer listen i taskRegister
 // og legger alle inn på nytt igjen
 
 function animateListOut() 

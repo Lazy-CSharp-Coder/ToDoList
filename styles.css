@@ -135,6 +135,7 @@ main {
   padding-left : 20px;
   padding-right: 20px;
   padding-bottom: 20px;
+  padding-top: 20px;
   background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
   
@@ -299,7 +300,7 @@ main {
   height: 650px;
   background-color: rgb(50, 50, 50);
   border: 6px solid var(--primaryTextColor);
-    background-color: rgba(50, 50, 50, 0.5);
+    background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
   margin:0px;
 

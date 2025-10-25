@@ -53,7 +53,9 @@ header {
   padding: 0 0 0 0; /* top right bottom left eks 10 15 15 10 - top/bottom - left/right */
   background-color: var(--headerBackgroundColor);
   height: 81px;
+  
   /* from hero pattens */
+
   background-color: #d9d9d9;
   background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%2318141e' fill-opacity='0.17' fill-rule='evenodd'/%3E%3C/svg%3E");
   box-shadow: 5px 8px 15px 5px #000000;
@@ -114,8 +116,8 @@ li {
   --lowPriorityColor:darkblue;
   --primaryTextColor:darkblue;
   background-color: var(--lightModeBackgroundColor);
-  .regTaskToDoForm { background-color: var(--lightModeBackgroundColor);}
-  .toDoListDiv { background-color: rgb(200,200,200);}
+  .regTaskToDoForm { background-color: rgba(221,221,221, 0.6);}
+  .toDoListDiv { background-color: rgba(200,200,200, 0.6);}
 }
 
 
@@ -142,8 +144,21 @@ main {
   padding-top: 20px;
   background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
-  
+  border: 2px solid var(--primaryTextColor);
+  box-shadow: 5px 8px 21px 2px #000000;
+
+  animation-name: slideInTop;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
 }
+
+@keyframes slideInTop {
+  0% { transform:translateY(-1000px);}
+  60% { transform:translateY(100px);}
+  100% { transform: translateY(0);}
+}
+
 
 .taskToDoLabel, .taskDateLabel {
   flex-direction: row;
@@ -249,6 +264,7 @@ main {
   background-color:var(--headerBackgroundColor);
   color:black;
   margin-top: 23px;
+
 }
 
 /* div for feilmeldinger - er tom og skal i utgangspunktet være hidden */
@@ -303,12 +319,17 @@ main {
   width: 780px;
   height: 650px;
   background-color: rgb(50, 50, 50);
-  border: 6px solid var(--primaryTextColor);
+  border: 2px solid var(--primaryTextColor);
+  /* border: 6px solid var(--primaryTextColor); */
     background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
   margin:0px;
-
-
+  box-shadow: 5px 8px 21px 2px #000000;
+  animation-name: slideInTop;
+  animation-duration: 1.2s;
+  animation-delay: 0.3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards
 
 }
 
@@ -504,6 +525,7 @@ footer {
   /* background-color: var(--headerBackgroundColor); */
   height: 81px;
   margin:0;
+  box-shadow: 5px -8px 15px 5px #000000;
   background-color: #d9d9d9;
   background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%2318141e' fill-opacity='0.17' fill-rule='evenodd'/%3E%3C/svg%3E");
   /* box-shadow: 5px 8px 15px 5px #000000; */

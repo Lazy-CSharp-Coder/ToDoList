@@ -3,9 +3,10 @@
 .errorMsgDiv {
     width: 512 px;
     height:187px;
-    background-color: rgb(145, 50, 50);
-    border:2px solid #78affa;
-    color:white;
+    background-color: rgba(145, 50, 50, 0.5);
+    border: var(--primaryBorder);
+    box-shadow: var(--primaryBoxShadow);
+    color:#dcdcdc;
     }
   
   .errorHeadingText {
@@ -33,25 +34,14 @@
 
 @keyframes rotateIn {
 
-    0% { transform:rotateX(90deg);
-        
-        }
-    100% { 
-            transform:rotateX(0deg);
-            
-        }
-
+    0% { transform:rotateX(90deg);  }
+    100% { transform:rotateX(0deg);  }
 }
 
 @keyframes rotateOut {
 
-    0% { transform:rotateX(0deg);
-        
-        }
-    100% { 
-            transform:rotateX(90deg);
-            
-        }
+    0% { transform:rotateX(0deg);  }
+    100% { transform:rotateX(90deg);  }
 
 }
 

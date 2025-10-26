@@ -3,7 +3,7 @@
 :root
 {
   --headerBackgroundColor: #d9d9d9;
-  --primaryBackgroudColor:  background-color: rgba(50, 50, 50, 0.6);
+  --primaryBackgroudColor: rgba(50, 50, 50, 0.6);
   --primaryBorder : 2px solid #40a0db;
   --lightModeBackgroundColor: rgb(221,221,221);
   --primaryTextColor: #40a0dB;
@@ -43,6 +43,10 @@ body {
 
 p {
   margin: 5px;
+}
+
+a {
+  color:var(--highPriorityColor);
 }
 
 /* HEADER */

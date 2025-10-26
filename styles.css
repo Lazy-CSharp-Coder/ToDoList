@@ -132,7 +132,7 @@ li {
 main {
  flex-grow: 1;
   margin: 40px;
-  perspective: 1000px;
+
 }
 
 
@@ -167,7 +167,7 @@ main {
 }
 
 .regTaskToDoForm:hover {
-  max-height: 1000px;
+
 }
 
 @keyframes slideInTop {
@@ -284,7 +284,7 @@ main {
   transition: all;
   transition-timing-function: ease-in-out;
 
-  transition-duration: 0.4s;
+  transition-duration: 0.3s;
   
 }
 
@@ -292,6 +292,7 @@ main {
   border: 3px solid darkgoldenrod;
   color: lightskyblue;
   background-color: rgb(100, 100, 100);
+  transform:rotateX(360deg);
 }
 
 /* div for feilmeldinger - er tom og skal i utgangspunktet være hidden */
@@ -482,7 +483,7 @@ main {
 .creditButton {
   width : 70px;
   transition-property: all;
-  transition-duration: 0.3s;
+  transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
 }
 
@@ -491,7 +492,7 @@ main {
   scale : 1.1;
   border : 2px double rgb(9, 48, 52);
   color: var(--lowPriorityColor);
-  transform : rotate(360deg);
+  transform:rotateY(360deg);
   
 }
 

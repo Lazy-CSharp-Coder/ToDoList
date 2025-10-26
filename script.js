@@ -339,16 +339,17 @@ function addTaskToList(event)
     
     const childArray = Array.from(newTask.children);
 
-    childArray[1].style.opacity = "0";
-    childArray[2].style.opacity = "0";
+    // childArray[1].style.opacity = "0";
+    // childArray[2].style.opacity = "0";
     
-    let sourceRect = taskToDoInputElement.getBoundingClientRect();
-    let destRect = childArray[0].getBoundingClientRect();
+    let sourceRect = childArray[1].getBoundingClientRect();
+    console.log(childArray[1]);
+    let destRect = newTask.getBoundingClientRect();
     let xpos = Math.trunc(sourceRect.x - destRect.x);
     console.log("Xpos is : " + xpos);
     let ypos = Math.trunc(sourceRect.y - destRect.y);
     
-    let keyframes = 
+    const keyframes = 
     [
         { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
         { transform : `translateX(0) translateY(0)`}        
@@ -358,16 +359,16 @@ function addTaskToList(event)
   
     sourceRect = taskDateInputElement.getBoundingClientRect();
      destRect = newTask.getBoundingClientRect();
-     xpos = Math.trunc(sourceRect.x - destRect.x);
+    const xpos2 = Math.trunc(sourceRect.x - destRect.x);
     console.log("Xpos is : " + xpos);
-    ypos = Math.trunc(sourceRect.y - destRect.y);
-    keyframes = 
+    const ypos2 = Math.trunc(sourceRect.y - destRect.y);
+    const keyframes2 = 
     [
-        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
+        { transform : `translateX(${xpos2}px) translateY(${ypos2}px)`},
         { transform : `translateX(0) translateY(0)`}        
     ];
 
-    animation = newTask.animate(keyframes, options);
+    animation = newTask.animate(keyframes2, options);
     animation.onfinish( () => 
     {   childArray[1].style.opacity = "0";
          childArray[2].style.opacity = "0";

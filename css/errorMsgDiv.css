@@ -13,11 +13,13 @@
   
   .errorHeadingText {
     background-color:  rgba(145, 50, 50, 0.5);
+    font-size: 20px;
     color:black;
-    padding-left: 10px;
+    padding: 10px 20px;
     margin: 0;
     border: 1px solid black;
     width: 100%;
+    box-sizing: border-box;
   }
   
   .showErrorMsg {

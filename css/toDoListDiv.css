@@ -6,10 +6,9 @@
     flex-direction: column;
     width: 780px;
     height: 650px;
-    background-color: var(--primaryBackgroudColor);
     border: var(--primaryBorder);
-    /* border: 6px solid var(--primaryTextColor); */
-      background-color: rgba(50, 50, 50, 0.6);
+
+    background-color:var(--primaryBackgroundColor);
     border-radius: 5px;
     margin:0px;
     box-shadow: 5px 8px 21px 2px #000000;

@@ -11,7 +11,7 @@
 :root
 {
   --headerBackgroundColor: #d9d9d9;
-  --primaryBackgroudColor: rgba(50, 50, 50, 0.6);
+  --primaryBackgroundColor: rgba(50, 50, 50, 0.6);
   --primaryBorder : 2px solid #40a0db;
   --lightModeBackgroundColor: rgb(221,221,221);
   --primaryTextColor: #40a0dB;
@@ -157,7 +157,7 @@ main {
 {
   position: fixed;
   bottom:110px;
-  background-color:  var(--primaryBackgroudColor);
+  background-color:  var(--primaryBackgroundColor);
   border : var(--primaryBorder);
   flex-direction: column;
   padding: 25px;

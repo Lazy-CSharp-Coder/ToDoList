@@ -295,50 +295,7 @@ main {
   transform:rotateX(360deg);
 }
 
-/* div for feilmeldinger - er tom og skal i utgangspunktet være hidden */
 
-.errorMsgDiv {
-  width: 512 px;
-  height:187px;
-  background-color: rgb(145, 50, 50);
-  border:2px solid #78affa;
-  color:white;
-  }
-
-.errorHeadingText {
-  background-color: #78affa;
-  color:black;
-  padding-left: 10px;
-  margin: 0;
-  border: 1px solid black;
-}
-
-.showErrorMsg {
-  display: block;
-  animation-name: slideInLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-}
-
-.removeErrorMsg {
-  animation-name: slideOutLeft;
-  animation-duration: 1s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideInLeft {
-  0% { transform: translateX(-1300px);}
-  60% { transform: translateX(20px);}
-  100%{ transform: translateX(0); }
-}
-
-@keyframes slideOutLeft {
-  0% { transform: translateX(0);}
-  20% { transform: translateX(20px);}
-  100% { transform: translateX(-1300px);}
-}
 
 /* så over til selve listen og knappene til den */
 

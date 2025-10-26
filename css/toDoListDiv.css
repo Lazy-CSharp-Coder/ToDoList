@@ -1,0 +1,129 @@
+@import url("\.styles.css");
+
+/* så over til selve listen og knappene til den */
+
+.toDoListDiv {
+    flex-direction: column;
+    width: 780px;
+    height: 650px;
+    background-color: var(--primaryBackgroudColor);
+    border: var(--primaryBorder);
+    /* border: 6px solid var(--primaryTextColor); */
+      background-color: rgba(50, 50, 50, 0.6);
+    border-radius: 5px;
+    margin:0px;
+    box-shadow: 5px 8px 21px 2px #000000;
+    animation-name: slideInTop;
+    animation-duration: 1.2s;
+    animation-delay: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards
+  
+  }
+  
+  .toDoList {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    gap: 10px;
+      /* overflow-y: scroll; */
+    /* scroll-behavior: smooth; */
+  }
+  
+  .listButton {
+    width: 75px;
+    height: 32px;
+  
+    font-family: var(--primaryFontFamily);
+    font-size: 10px;
+    text-decoration: none;
+  
+  }
+  
+  .listElement {
+   
+    display: grid;
+    grid-template-columns: 100px 430px 100px 100px;
+    /* margin: 10px; */
+    padding-left: 18px;
+    font-size: 15px;
+    margin: 0px;
+    justify-items: left;
+  
+  }
+  
+  .listHeadingDiv {
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+  
+    height: fit-content;
+  
+     background-color: #add8e6; 
+    border: 1px solid black;
+    margin-bottom: 10px;
+    
+  }
+  
+  
+  .listTextDiv {
+    gap: 22px;
+  }
+  .sortListButton {
+    font-family: var(--primaryFontFamily);
+    margin-right: 73px;
+    /* height: 20px; */
+  }
+  
+  .taskDone {
+  
+    text-decoration: line-through;
+  
+  }
+  .listHeadingText {
+   padding-left: 20px;
+   
+  }
+  
+  .buttonDiv {
+    flex-direction: column;
+    justify-content: center;
+    gap: 37px;
+  }
+  
+  .taskCompletedButton, .taskDeleteButton {
+    font-family: var(--primaryFontFamily);
+    font-size: 15px;
+    width : 216px;
+    height: 75px;
+    background-color: var(--headerBackgroundColor);
+    border: 1px solid var(--primaryTextColor);
+    border-radius: 5px;
+    align-items: center;
+    gap: 15px;
+    padding-left:20px;
+  }
+  
+  .taskCompletedImg {
+    width: 39px;
+  }
+  
+  .taskDeleteImg {
+    width: 45px;
+  }
+  
+  .removeListItem {
+    animation: slideOutBottom;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .addListItem {
+    animation: slideInBottom;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }

@@ -337,7 +337,7 @@ function addTaskToList(event)
     const ypos = Math.trunc(sourceRect.y - destRect.y);
     const keyframes = 
     [
-        { transform : `translateX(-${xpos}px) translateY(-${ypos}px)`},
+        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
         { transform : `translateX(0) translateY(0)`}        
     ];
 

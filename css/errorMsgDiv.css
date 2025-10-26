@@ -19,14 +19,14 @@
   .showErrorMsg {
 
     animation-name: rotateIn;
-    animation-duration: 1s;
+    animation-duration: 0.4s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
   }
   
   .removeErrorMsg {
-    animation-name: slideOutLeft;
-    animation-duration: 1s;
+    animation-name: rotateOut;
+    animation-duration: 0.46s;
     animation-timing-function: ease-in;
     animation-fill-mode: forwards;
   }
@@ -38,6 +38,18 @@
         }
     100% { 
             transform:rotateX(0deg);
+            
+        }
+
+}
+
+@keyframes rotateOut {
+
+    0% { transform:rotateX(0deg);
+        
+        }
+    100% { 
+            transform:rotateX(90deg);
             
         }
 

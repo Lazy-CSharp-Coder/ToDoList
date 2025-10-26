@@ -343,8 +343,8 @@ function addTaskToList(event)
     // childArray[2].style.opacity = "0";
     
     let sourceRect = taskToDoInputElement.getBoundingClientRect();
-    console.log(childArray[1]);
-    let destRect = childArray[1].getBoundingClientRect();
+    console.log(childArray[0]);
+    let destRect = childArray[0].getBoundingClientRect();
     let xpos = Math.trunc(sourceRect.x - destRect.x);
     console.log("Xpos is : " + xpos);
     let ypos = Math.trunc(sourceRect.y - destRect.y);

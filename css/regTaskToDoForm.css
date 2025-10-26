@@ -1,0 +1,162 @@
+@import "../styles.css";
+
+.regTaskToDoForm {
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    gap:24px;
+    padding-left : 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color:var(--primaryBackgroudColor);
+    border-radius: 5px;
+    border: var(--primaryBorder);
+    box-shadow: 5px 8px 21px 2px #000000;
+  
+    animation-name: slideInTop;
+    animation-duration: 1.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.5s;
+  }
+  
+  .regTaskToDoForm:hover {
+  
+  }
+  
+  @keyframes slideInTop {
+    0% { transform:translateY(-1000px);}
+    60% { transform:translateY(100px);}
+    100% { transform: translateY(0);}
+  }
+  
+  
+  .taskToDoLabel, .taskDateLabel {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .taskToDoLabel {
+    gap: 38px;
+  }
+  
+  .taskDateLabel {
+    gap: 48px;
+  }
+  
+  .taskToDoInput, .taskDateInput {
+    
+    background-color: lightblue;
+    color:black;
+    padding-left: 10px;
+    border-radius: 5px;
+  }
+  .taskToDoInput {
+    width:366px;
+    height:40px;
+   
+  }
+  
+  .taskDateInput {
+    width: 100px;
+    height: 40px;
+  }
+  
+  .taskIcon {
+    width:82px;
+  }
+  
+  .taskDateIcon {
+    width:70px;
+  }
+  
+  .taskPriorityIcon {
+    width: 62px;
+    align-self: baseline;
+  }
+  
+  .taskPriorityDiv {
+    align-items: center;
+    gap: 57px;
+  }
+  
+  .taskPriorityCheck {
+    width:30px;
+    height:30px;
+    border-radius: 3px;
+    accent-color: lightblue;
+  
+  
+  }
+  
+  .priority {
+    align-items: center;
+  }
+  
+  .priorityListDiv {
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  
+  .priorityText {
+    color: #40a0dB;
+    font-size: 26px;
+    margin-top: 2px;
+  
+  }
+  
+  .highPriorityText, .mediumPriorityText, .lowPriorityText {
+    font-size: 20px;
+    margin: 2px;
+    margin-left: 20px;
+  }
+  
+  .highPriorityText {
+    color:var(--highPriorityColor);
+  
+  }
+  
+  .mediumPriorityText {
+    color:var(--mediumPriorityColor);
+  }
+  
+  .lowPriorityText {
+    color:var(--lowPriorityColor);
+  }
+  
+  .addTaskToListButton {
+    font-family: var(--primaryFontFamily);
+    font-size: 24px;
+    width:512px;
+    height:54px;
+    border-radius: 5px;
+    border:1px solid var(--primaryTextColor);
+    background-color:var(--headerBackgroundColor);
+    color:black;
+    margin-top: 23px;
+    transition: all;
+    transition-timing-function: ease-in-out;
+  
+    transition-duration: 0.3s;
+    
+  }
+  
+  .addTaskToListButton:hover {
+    border: 3px solid darkgoldenrod;
+    color: lightskyblue;
+    background-color: rgb(100, 100, 100);
+    transform:rotateX(360deg);
+  }
+  
+  
+  .regErrorWrapperDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  

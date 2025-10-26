@@ -3,7 +3,8 @@
 :root
 {
   --headerBackgroundColor: #d9d9d9;
-  --primaryBackgroudColor: black;
+  --primaryBackgroudColor:  background-color: rgba(50, 50, 50, 0.6);
+  --primaryBorder : 2px solid #40a0db;
   --lightModeBackgroundColor: rgb(221,221,221);
   --primaryTextColor: #40a0dB;
   --highPriorityColor:#e68f93;
@@ -142,9 +143,9 @@ main {
   padding-right: 20px;
   padding-bottom: 20px;
   padding-top: 20px;
-  background-color: rgba(50, 50, 50, 0.6);
+  background-color:var(--primaryBackgroudColor);
   border-radius: 5px;
-  border: 2px solid var(--primaryTextColor);
+  border: var(--primaryBorder);
   box-shadow: 5px 8px 21px 2px #000000;
 
   animation-name: slideInTop;
@@ -318,8 +319,8 @@ main {
   flex-direction: column;
   width: 780px;
   height: 650px;
-  background-color: rgb(50, 50, 50);
-  border: 2px solid var(--primaryTextColor);
+  background-color: var(--primaryBackgroudColor);
+  border: var(--primaryBorder);
   /* border: 6px solid var(--primaryTextColor); */
     background-color: rgba(50, 50, 50, 0.6);
   border-radius: 5px;
@@ -444,7 +445,8 @@ main {
 {
   position: fixed;
   bottom:110px;
-  background-color: var(--headerBackgroundColor);
+  background-color:  var(--primaryBackgroudColor);
+  border : var(--primaryBorder);
   flex-direction: column;
   padding: 25px;
   width:fit-content;

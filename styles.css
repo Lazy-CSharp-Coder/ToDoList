@@ -13,7 +13,7 @@
   --headerBackgroundColor: #d9d9d9;
   --primaryBackgroundColor: rgba(50, 50, 50, 0.6);
   --primaryBorder : 2px solid #40a0db;
-  --lightModeBackgroundColor: rgb(221,221,221);
+  --lightModeBackgroundColor: rgba(221,221,221, 0.6);
   --primaryTextColor: #40a0dB;
   --highPriorityColor:#e68f93;
   --mediumPriorityColor : darkgreen;
@@ -132,9 +132,8 @@ li {
   --mediumPriorityColor: darkgreen;
   --lowPriorityColor:darkblue;
   --primaryTextColor:darkblue;
-  --primaryBackgroundcolor: var(--lightModeBackgroundColor);
-  .regTaskToDoForm { background-color: rgba(221,221,221, 0.6);}
-  .toDoListDiv { background-color: rgba(200,200,200, 0.6);}
+  --primaryBackgroundColor: var(--lightModeBackgroundColor);
+
 }
 
 

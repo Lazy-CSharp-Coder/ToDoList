@@ -257,6 +257,7 @@ function checkForRegErrors(dateString, taskString)
             console.log("er i dateError");
             const dateErrorMsg = document.createElement("p");
             dateErrorMsg.textContent = "Datoformatet er feil."
+            
             errorMsgDiv.appendChild(dateErrorMsg);
         }
         if(taskLengthError)

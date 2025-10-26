@@ -1,11 +1,14 @@
+@import "../styles.css";
+
 /* div for feilmeldinger - er tom og skal i utgangspunktet være hidden */
 
 .errorMsgDiv {
     flex-direction: column;
     align-items: center;
+
     width: 512px;
     height:187px;
-    background-color: rgba(145, 50, 50, 0.5);
+    background-color: var(--primaryBackgroundColor);
     border: var(--primaryBorder);
     box-shadow: var(--primaryBoxShadow);
     color:#dcdcdc;
@@ -20,6 +23,14 @@
     border: 1px solid black;
     width: 100%;
     box-sizing: border-box;
+    text-align: center;
+    
+  }
+
+  .errorText {
+    font-size: 14px;
+    color:var(--primaryTextColor);
+
   }
   
   .showErrorMsg {

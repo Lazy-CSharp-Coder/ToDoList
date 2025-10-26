@@ -132,7 +132,7 @@ li {
   --mediumPriorityColor: darkgreen;
   --lowPriorityColor:darkblue;
   --primaryTextColor:darkblue;
-  background-color: var(--lightModeBackgroundColor);
+  --primaryBackgroundcolor: var(--lightModeBackgroundColor);
   .regTaskToDoForm { background-color: rgba(221,221,221, 0.6);}
   .toDoListDiv { background-color: rgba(200,200,200, 0.6);}
 }

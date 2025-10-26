@@ -460,6 +460,22 @@ main {
   align-self: center;
 }
 
+.creditButton {
+  width : 70px;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+.creditButton:hover {
+  border: var(--primaryBorder);
+  scale : 1.1;
+  border : 2px double rgb(9, 48, 52);
+  color: var(--lowPriorityColor);
+  transform : rotate(360deg);
+  
+}
+
 .fadeIn {
   animation-name: fadeIn;
   animation-duration: 1.2s;

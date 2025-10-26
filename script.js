@@ -329,11 +329,12 @@ function addTaskToList(event)
     const newTask = createListElement(taskDateInput, taskToDoInput, priority);
     toDoList.appendChild(newTask);
     
-    /*
+    
     const sourceRect = taskToDoInputElement.getBoundingClientRect();
-    const xpos = Math.trunc(sourceRect.x);
+    const destRect = newTask.getBoundingClientRect();
+    const xpos = Math.trunc(sourceRect.x - destRect.x);
     console.log("Xpos is : " + xpos);
-    const ypos = Math.trunc(sourceRect.y);
+    const ypos = Math.trunc(sourceRect.y - destRect.y);
     const keyframes = 
     [
         { transform : `translateX(-${xpos}px) translateY(-${ypos}px)`},
@@ -347,7 +348,7 @@ function addTaskToList(event)
         fill : "forwards",
 
     };
-    */
+    
 
     const animation = newTask.animate(keyframes, options);
 

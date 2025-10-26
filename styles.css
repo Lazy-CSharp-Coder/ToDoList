@@ -131,7 +131,6 @@ li {
   --highPriorityColor:darkred;
   --mediumPriorityColor: darkgreen;
   --lowPriorityColor:darkblue;
-  --primaryTextColor:darkblue;
   --primaryBackgroundColor: var(--lightModeBackgroundColor);
 
 }

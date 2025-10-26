@@ -19,7 +19,7 @@
   .showErrorMsg {
 
     animation-name: rotateIn;
-    animation-duration: 3s;
+    animation-duration: 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
   }
@@ -33,12 +33,12 @@
 
 @keyframes rotateIn {
 
-    0% { transform:translateY(-120px);
-         opacity: 0.5;
+    0% { transform:rotateX(90deg);
+        
         }
     100% { 
-            transform:translateY(0);
-            opacity: 1;
+            transform:rotateX(0deg);
+            
         }
 
 }

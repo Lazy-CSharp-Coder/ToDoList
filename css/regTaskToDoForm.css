@@ -49,11 +49,12 @@
   }
   
   .taskToDoInput, .taskDateInput {
-    
+
     background-color: lightblue;
     color:black;
     padding-left: 10px;
     border-radius: 5px;
+
   }
   .taskToDoInput {
     width:366px;

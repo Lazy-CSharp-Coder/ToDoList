@@ -327,8 +327,25 @@ function addTaskToList(event)
          // lag list element
 
     const newTask = createListElement(taskDateInput, taskToDoInput, priority);
+    const sourceRect = taskToDoInput.getBoundingClientRect();
+    const xpos = Math.trunc(sourceRect.x);
+    const ypos = Math.trunc(sourceRect.y);
+    const keyframes = 
+    [
+        { transform : `translateX(${xpos})px translateY(${ypos})`},
+        { transform : `translateX(0) translateY(0)`}        
+    ];
+
+    const options =
+    {
+        duration : 1500,
+        easing : "ease-in-out",
+        fill : forwards,
+
+    };
 
     toDoList.appendChild(newTask);
+    const animation = newTask.animate(keyframes, options);
 
     // clear form
 

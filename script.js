@@ -342,9 +342,9 @@ function addTaskToList(event)
     // childArray[1].style.opacity = "0";
     // childArray[2].style.opacity = "0";
     
-    let sourceRect = childArray[1].getBoundingClientRect();
+    let sourceRect = taskToDoInputElement.getBoundingClientRect();
     console.log(childArray[1]);
-    let destRect = newTask.getBoundingClientRect();
+    let destRect = childArray[1].getBoundingClientRect();
     let xpos = Math.trunc(sourceRect.x - destRect.x);
     console.log("Xpos is : " + xpos);
     let ypos = Math.trunc(sourceRect.y - destRect.y);
@@ -355,7 +355,7 @@ function addTaskToList(event)
         { transform : `translateX(0) translateY(0)`}        
     ];
 
-    let animation = childArray[0].animate(keyframes, options);
+    const animation = childArray[0].animate(keyframes, options);
   
     sourceRect = taskDateInputElement.getBoundingClientRect();
      destRect = newTask.getBoundingClientRect();
@@ -368,12 +368,8 @@ function addTaskToList(event)
         { transform : `translateX(0) translateY(0)`}        
     ];
 
-    animation = newTask.animate(keyframes2, options);
-    animation.onfinish( () => 
-    {   childArray[1].style.opacity = "0";
-         childArray[2].style.opacity = "0";
-    });
-    // clear form
+    const animation2 = newTask.animate(keyframes2, options);
+     // clear form
 
     taskToDoInputElement.value = "";
     taskDateInputElement.value = "";

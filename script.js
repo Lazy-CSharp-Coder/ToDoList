@@ -327,12 +327,13 @@ function addTaskToList(event)
          // lag list element
 
     const newTask = createListElement(taskDateInput, taskToDoInput, priority);
-    const sourceRect = taskToDoInput.getBoundingClientRect();
+    const sourceRect = taskToDoInputElement.getBoundingClientRect();
     const xpos = Math.trunc(sourceRect.x);
+    console.log("Xpos is : " + xpos);
     const ypos = Math.trunc(sourceRect.y);
     const keyframes = 
     [
-        { transform : `translateX(${xpos})px translateY(${ypos})`},
+        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
         { transform : `translateX(0) translateY(0)`}        
     ];
 
@@ -340,7 +341,7 @@ function addTaskToList(event)
     {
         duration : 1500,
         easing : "ease-in-out",
-        fill : forwards,
+        fill : "forwards",
 
     };
 

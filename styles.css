@@ -1,3 +1,9 @@
+/* module imports */
+
+@import url("./css/errorMsgDiv.css");
+
+/* font imports */
+
 @import url('https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap');
 
 :root

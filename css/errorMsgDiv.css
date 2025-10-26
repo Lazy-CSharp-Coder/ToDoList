@@ -1,6 +1,7 @@
 /* div for feilmeldinger - er tom og skal i utgangspunktet være hidden */
 
 .errorMsgDiv {
+    flex-direction: column;
     width: 512 px;
     height:187px;
     background-color: rgba(145, 50, 50, 0.5);

@@ -329,18 +329,6 @@ function addTaskToList(event)
     const newTask = createListElement(taskDateInput, taskToDoInput, priority);
     toDoList.appendChild(newTask);
     
-    
-    const sourceRect = taskToDoInputElement.getBoundingClientRect();
-    const destRect = newTask.getBoundingClientRect();
-    const xpos = Math.trunc(sourceRect.x - destRect.x);
-    console.log("Xpos is : " + xpos);
-    const ypos = Math.trunc(sourceRect.y - destRect.y);
-    const keyframes = 
-    [
-        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
-        { transform : `translateX(0) translateY(0)`}        
-    ];
-
     const options =
     {
         duration : 1500,
@@ -349,9 +337,41 @@ function addTaskToList(event)
 
     };
     
+    const childArray = Array.from(newTask.children);
 
-    const animation = newTask.animate(keyframes, options);
+    childArray[1].style.opacity = "0";
+    childArray[2].style.opacity = "0";
+    
+    let sourceRect = taskToDoInputElement.getBoundingClientRect();
+    let destRect = childArray[0].getBoundingClientRect();
+    let xpos = Math.trunc(sourceRect.x - destRect.x);
+    console.log("Xpos is : " + xpos);
+    let ypos = Math.trunc(sourceRect.y - destRect.y);
+    
+    let keyframes = 
+    [
+        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
+        { transform : `translateX(0) translateY(0)`}        
+    ];
 
+    let animation = childArray[0].animate(keyframes, options);
+  
+    sourceRect = taskDateInputElement.getBoundingClientRect();
+     destRect = newTask.getBoundingClientRect();
+     xpos = Math.trunc(sourceRect.x - destRect.x);
+    console.log("Xpos is : " + xpos);
+    ypos = Math.trunc(sourceRect.y - destRect.y);
+    keyframes = 
+    [
+        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
+        { transform : `translateX(0) translateY(0)`}        
+    ];
+
+    animation = newTask.animate(keyframes, options);
+    animation.onfinish( () => 
+    {   childArray[1].style.opacity = "0";
+         childArray[2].style.opacity = "0";
+    });
     // clear form
 
     taskToDoInputElement.value = "";

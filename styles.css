@@ -132,6 +132,7 @@ li {
 main {
  flex-grow: 1;
   margin: 40px;
+  perspective: 1000px;
 }
 
 
@@ -159,6 +160,14 @@ main {
   animation-duration: 1.2s;
   animation-timing-function: ease-in-out;
   animation-fill-mode: forwards;
+
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.regTaskToDoForm:hover {
+  max-height: 1000px;
 }
 
 @keyframes slideInTop {
@@ -272,7 +281,17 @@ main {
   background-color:var(--headerBackgroundColor);
   color:black;
   margin-top: 23px;
+  transition: all;
+  transition-timing-function: ease-in-out;
 
+  transition-duration: 0.4s;
+  
+}
+
+.addTaskToListButton:hover {
+  border: 3px solid darkgoldenrod;
+  color: lightskyblue;
+  background-color: rgb(100, 100, 100);
 }
 
 /* div for feilmeldinger - er tom og skal i utgangspunktet være hidden */

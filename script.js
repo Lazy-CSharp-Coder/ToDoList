@@ -339,39 +339,39 @@ function addTaskToList(event)
     
     const childArray = Array.from(newTask.children);
     console.log(childArray);
-    // childArray[1].style.opacity = "0";
-    // childArray[2].style.opacity = "0";
+    childArray[0].style.opacity = "0";
+    childArray[1].style.opacity = "0";
+    childArray[2].style.opacity = "0";
     
     
-    const sourceRect = taskToDoInputElement.getBoundingClientRect();
-    console.log(taskToDoInputElement);
+    // const sourceRect = taskToDoInputElement.getBoundingClientRect();
+    // console.log(taskToDoInputElement);
     
-     console.log(childArray[0]);
-     console.log(sourceRect);
+    //  console.log(childArray[0]);
+    //  console.log(sourceRect);
     
-    const destRect = childArray[0].getBoundingClientRect();
-    console.log(destRect);
+    // const destRect = childArray[0].getBoundingClientRect();
+    // console.log(destRect);
 
-    const xpos = Math.trunc(sourceRect.x - destRect.x);
-    const ypos = Math.trunc(sourceRect.y - destRect.y);
-    console.log("Xpos is : " + xpos);
-    console.log("YPos is : " + ypos);
+    // const xpos = Math.trunc(sourceRect.x - destRect.x);
+    // const ypos = Math.trunc(sourceRect.y - destRect.y);
+    // console.log("Xpos is : " + xpos);
+    // console.log("YPos is : " + ypos);
 
-    const keyframes = 
-    [
-        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
-        { transform : `translateX(0) translateY(0)`}        
-    ];
+    // const keyframes = 
+    // [
+    //     { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
+    //     { transform : `translateX(0) translateY(0)`}        
+    // ];
         
-    const childToDetach = childArray[0];
-    newTask.remove(childToDetach);
-    console.log("Child after remove :" + childToDetach);
-    const animation = childArray[0].animate(keyframes, options);
+    // const childToDetach = childArray[0];
+    // // newTask.remove(childToDetach);
+    // console.log("Child after remove :" + childToDetach);
+    // const animation = childArray[0].animate(keyframes, options);
   
     const sourceRect2 = taskDateInputElement.getBoundingClientRect();
     const destRect2 = newTask.getBoundingClientRect();
     const xpos2 = Math.trunc(sourceRect2.x - destRect2.x);
-    console.log("Xpos is : " + xpos);
     const ypos2 = Math.trunc(sourceRect2.y - destRect2.y);
 
     const keyframes2 = 
@@ -381,7 +381,22 @@ function addTaskToList(event)
     ];
 
     const animation2 = newTask.animate(keyframes2, options);
-     // clear form
+
+    setTimeout( function () 
+    {
+        for(let i = 0;  i < childArray.length; i++)
+        {
+            childArray[i].classList.add("fadeIn");
+            childArray[i].addEventListener("animationend", function() 
+            { 
+                childArray[i].classList.remove("fadeIn");  
+                childArray[i].style.opacity = "1";
+            
+            }, {once: true});
+        }
+    }, 1500);
+
+         // clear form
 
     taskToDoInputElement.value = "";
     taskDateInputElement.value = "";

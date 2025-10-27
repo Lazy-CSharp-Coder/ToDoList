@@ -362,7 +362,10 @@ function addTaskToList(event)
         { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
         { transform : `translateX(0) translateY(0)`}        
     ];
-
+        
+    const childToDetach = childArray[0];
+    newTask.remove(childToDetach);
+    console.log("Child after remove :" + childToDetach);
     const animation = childArray[0].animate(keyframes, options);
   
     const sourceRect2 = taskDateInputElement.getBoundingClientRect();
@@ -370,9 +373,6 @@ function addTaskToList(event)
     const xpos2 = Math.trunc(sourceRect2.x - destRect2.x);
     console.log("Xpos is : " + xpos);
     const ypos2 = Math.trunc(sourceRect2.y - destRect2.y);
-    
-    const childToDetach = childArray[0];
-    newTask.remove(childToDetach);
 
     const keyframes2 = 
     [

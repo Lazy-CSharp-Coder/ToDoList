@@ -331,7 +331,7 @@ function addTaskToList(event)
     
     const options =
     {
-        duration : 800,
+        duration : 1800,
         easing : "ease-in-out",
         fill : "forwards",
 
@@ -340,8 +340,8 @@ function addTaskToList(event)
     const childArray = Array.from(newTask.children);
     console.log(childArray);
     // childArray[0].style.opacity = "0";
-    // childArray[1].style.opacity = "0";
-    // childArray[2].style.opacity = "0";
+    childArray[1].style.opacity = "0";
+    childArray[2].style.opacity = "0";
     
     
     const sourceRect = taskToDoInputElement.getBoundingClientRect();
@@ -353,8 +353,8 @@ function addTaskToList(event)
     const destRect = childArray[0].getBoundingClientRect();
     console.log(destRect);
 
-    const xpos = Math.trunc(sourceRect.x - destRect.x);
-    const ypos = Math.trunc(sourceRect.y - destRect.y);
+    let xpos = Math.trunc(sourceRect.x - destRect.x);
+    let ypos = Math.trunc(sourceRect.y - destRect.y);
     console.log("Xpos is : " + xpos);
     console.log("YPos is : " + ypos);
 
@@ -393,19 +393,19 @@ function addTaskToList(event)
         animation2.cancel();
 
     }
-    // setTimeout( function () 
-    // {
-    //     for(let i = 0;  i < childArray.length; i++)
-    //     {
-    //         childArray[i].classList.add("fadeIn");
-    //         childArray[i].addEventListener("animationend", function() 
-    //         { 
-    //             childArray[i].classList.remove("fadeIn");  
-    //             childArray[i].style.opacity = "1";
+    setTimeout( function () 
+    {
+        for(let i = 1;  i < childArray.length; i++)
+        {
+            childArray[i].classList.add("fadeIn");
+            childArray[i].addEventListener("animationend", function() 
+            { 
+                childArray[i].classList.remove("fadeIn");  
+                childArray[i].style.opacity = "1";
             
-    //         }, {once: true});
-    //     }
-    // }, 1500);
+            }, {once: true});
+        }
+    }, 1500);
 
          // clear form
 

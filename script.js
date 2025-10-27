@@ -357,9 +357,6 @@ function addTaskToList(event)
     console.log("Xpos is : " + xpos);
     console.log("YPos is : " + ypos);
 
-    const childToDetach = childArray[0];
-    newTask.remove(childToDetach);
-    
     const keyframes = 
     [
         { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
@@ -373,6 +370,10 @@ function addTaskToList(event)
     const xpos2 = Math.trunc(sourceRect2.x - destRect2.x);
     console.log("Xpos is : " + xpos);
     const ypos2 = Math.trunc(sourceRect2.y - destRect2.y);
+    
+    const childToDetach = childArray[0];
+    newTask.remove(childToDetach);
+
     const keyframes2 = 
     [
         { transform : `translateX(${xpos2}px) translateY(${ypos2}px)`},

@@ -331,7 +331,7 @@ function addTaskToList(event)
     
     const options =
     {
-        duration : 1000,
+        duration : 800,
         easing : "ease-in-out",
         fill : "forwards",
 

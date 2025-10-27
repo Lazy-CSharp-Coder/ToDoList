@@ -381,7 +381,11 @@ function addTaskToList(event)
     ];
 
     const animation2 = newTask.animate(keyframes2, options);
+    animation2.onfinish = function () 
+    {
+        animation2.cancel();
 
+    }
     setTimeout( function () 
     {
         for(let i = 0;  i < childArray.length; i++)

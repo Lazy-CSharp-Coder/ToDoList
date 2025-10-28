@@ -182,7 +182,7 @@ main {
 
 .fadeIn {
   animation-name: fadeIn;
-  animation-duration: 0.5s;
+  animation-duration: 0.8s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
 

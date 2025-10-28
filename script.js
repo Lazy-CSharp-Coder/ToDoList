@@ -368,7 +368,7 @@ function addTaskToList(event)
 
     const keyframes = 
     [
-        { transform : `translateX(${xpos}px) translateY(${ypos}px)`},
+        { transform : `translateX(${xpos}px) translateY(${ypos}px)`, color: "black" },
         { transform : `translateX(0) translateY(0)`}        
     ];
         
@@ -382,7 +382,7 @@ function addTaskToList(event)
     
     const keyframes2 = 
     [
-        { transform : `translateX(${xpos2}px) translateY(${ypos2}px)`},
+        { transform : `translateX(${xpos2}px) translateY(${ypos2}px)`, color: "black"},
         { transform : `translateX(0) translateY(0)`}        
     ];
 

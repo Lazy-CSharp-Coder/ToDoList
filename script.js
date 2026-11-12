@@ -231,11 +231,11 @@ function checkForRegErrors(dateString, taskString)
 
     const dateObject = new Date(dateString);
     if(isNaN(dateObject.valueOf())) dateError = true;
-    const currentDate = new Date();
-    if(dateObject.getDate() < currentDate.getDate() )
-        dateError = true;
-    if(dateObject.getDay() == 0 || dateObject.getDay() == 6)
-        dateError = true;
+    // const currentDate = new Date();
+    // if(dateObject.getDate() < currentDate.getDate() )
+    //     dateError = true;
+    // if(dateObject.getDay() == 0 || dateObject.getDay() == 6)
+    //     dateError = true;
 
     if(taskString.length < 2) taskLengthError = true;
 
